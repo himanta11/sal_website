@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Photo Gallery & Events | Scholar Academy of Learning</title>
+  <meta name="description" content="Explore campus photos, classroom moments, seminar events, computer lab, and felicitation ceremonies at Scholar Academy of Learning Dibrugarh & Tezpur.">
+  <meta name="keywords" content="Scholar Academy gallery, coaching campus photos, Dibrugarh academy photos, Tezpur coaching photos, felicitation ceremony, APSC coaching classroom, salcoaching">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://salcoaching.in/gallery.html">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="apple-touch-icon" href="assets/logo.svg">
+  <meta name="theme-color" content="#003882">
+
+  <!-- Local / Geo-Targeting SEO -->
+  <meta name="geo.region" content="IN-AS">
+  <meta name="geo.placename" content="Dibrugarh & Tezpur, Assam">
+  <meta name="geo.position" content="27.4738;94.9148">
+  <meta name="ICBM" content="27.4738, 94.9148">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Scholar Academy of Learning">
+  <meta property="og:url" content="https://salcoaching.in/gallery.html">
+  <meta property="og:title" content="Campus Photo Gallery & Events | Scholar Academy of Learning">
+  <meta property="og:description" content="View classroom infrastructure, CBT labs, student felicitations and seminar moments at Scholar Academy.">
+  <meta property="og:image" content="https://salcoaching.in/assets/logo.svg">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Campus Photo Gallery | Scholar Academy of Learning">
+  <meta name="twitter:description" content="Explore classrooms, digital labs, and student activities across Dibrugarh & Tezpur campuses.">
+  <meta name="twitter:image" content="https://salcoaching.in/assets/logo.svg">
+
+  <!-- JSON-LD: CollectionPage & BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://salcoaching.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gallery",
+            "item": "https://salcoaching.in/gallery.html"
+          }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://salcoaching.in/gallery.html#gallery",
+        "url": "https://salcoaching.in/gallery.html",
+        "name": "Scholar Academy Campus & Event Gallery",
+        "description": "Visual tour of Scholar Academy campuses, student life, interactive classrooms, and award ceremonies.",
+        "isPartOf": {
+          "@id": "https://salcoaching.in/#website"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Kalam:wght@700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ==========================================================================
+       GALLERY PAGE SPECIFIC STYLES
+       ========================================================================== */
+
+
+
+    /* Category Filter Tabs */
+    .gallery-filter-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.6rem 1.35rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: 1.5px solid #e2e8f0;
+      background: #ffffff;
+      color: #475569;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+      background: #eff6ff;
+    }
+
+    .filter-btn.active {
+      background: var(--primary-navy);
+      color: #ffffff;
+      border-color: var(--primary-navy);
+      box-shadow: 0 4px 14px rgba(0, 56, 130, 0.2);
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .gallery-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(0, 56, 130, 0.12);
+      border-color: #93c5fd;
+    }
+
+    .gallery-card-img-wrap {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: #091e3e;
+      cursor: pointer;
+    }
+
+    .gallery-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-card:hover .gallery-card-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .gallery-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(9, 30, 62, 0.85) 100%);
+      opacity: 0.85;
+      transition: var(--transition);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem;
+    }
+
+    .gallery-card-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .gallery-card-body {
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .gallery-card-title {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #0b2545;
+      margin-bottom: 0.4rem;
+      line-height: 1.35;
+    }
+
+    .gallery-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #64748b;
+      font-size: 0.82rem;
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .gallery-view-btn {
+      color: var(--primary-blue);
+      font-weight: 700;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0;
+      font-size: 0.85rem;
+    }
+
+    .gallery-view-btn:hover {
+      color: var(--primary-navy);
+      text-decoration: underline;
+    }
+
+
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 30, 62, 0.94);
+      z-index: 9999;
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .lightbox-modal.open {
+      display: flex;
+      animation: fadeIn 0.25s ease forwards;
+    }
+
+    .lightbox-content-box {
+      max-width: 900px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+      position: relative;
+    }
+
+    .lightbox-img-holder {
+      width: 100%;
+      max-height: 65vh;
+      background: #091e3e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .lightbox-img-holder img {
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+    }
+
+    .lightbox-info {
+      padding: 1.5rem 2rem;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .lightbox-close-btn:hover {
+      background: #ef4444;
+      transform: scale(1.08);
+    }
+
+    /* Empty state */
+    .empty-gallery-state {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px dashed #cbd5e1;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP INFO CONTACT BAR -->
+  <div class="top-info-contact-bar">
+    <div class="container top-info-container">
+      <a href="tel:+918638757905" class="top-info-item">
+        <i class="fa-solid fa-phone"></i>
+        <span><strong>Phone:</strong> +91 86387 57905</span>
+      </a>
+      <a href="mailto:saoldibrugarh@gmail.com" class="top-info-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span><strong>Email:</strong> saoldibrugarh@gmail.com</span>
+      </a>
+      <div class="top-info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span><strong>Locations:</strong> Dibrugarh (Lachit Nagar) & Tezpur (Murha Teteli)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-announcement-bar" id="announcementBar">
+    <div class="container announcement-container">
+      <div class="announcement-content">
+        <span class="announcement-badge"><i class="fa-solid fa-graduation-cap"></i> Admissions Open</span>
+        <span class="announcement-text">
+          <strong>New Batches 2026:</strong> Admissions open for APSC, ADRE 2.0, SSC, Banking, Spoken English & Computer Courses at Dibrugarh & Tezpur!
+          <a href="courses.html" class="announcement-link">Explore Courses &rarr;</a>
+        </span>
+      </div>
+      <button class="announcement-close-btn" onclick="dismissAnnouncement()" title="Dismiss announcement" aria-label="Close announcement">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Scholar Academy of Learning">
+        <img src="assets/logo.svg" alt="Scholar Academy of Learning" class="brand-logo-img">
+      </a>
+
+      <!-- Main Navigation Menu / Mobile Off-Canvas Drawer -->
+      <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+        <!-- Mobile Drawer Header -->
+        <div class="mobile-drawer-header">
+          <div class="drawer-brand">
+            <img src="assets/logo.svg" alt="Scholar Academy of Learning" class="drawer-logo">
+            <div>
+              <h4 class="drawer-title">Scholar Academy</h4>
+              <span class="drawer-subtitle">Learn • Prepare • Succeed</span>
+            </div>
+          </div>
+          <button class="drawer-close-btn" onclick="toggleMobileNav()" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- Navigation Items Container -->
+        <div class="mobile-drawer-body">
+          <a href="index.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-house"></i></span>
+            <span class="nav-item-text">Home</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span class="nav-item-text">Courses</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="about.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-building-columns"></i></span>
+            <span class="nav-item-text">About Us</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="https://salonlinetest.in/" target="_blank" rel="noopener" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-laptop-code"></i></span>
+            <span class="nav-item-text">Mocktest</span>
+            <i class="fa-solid fa-arrow-up-right-from-square nav-item-arrow" style="font-size: 0.72rem;"></i>
+          </a>
+          <a href="gallery.html" class="nav-link active">
+            <span class="nav-item-icon"><i class="fa-solid fa-photo-film"></i></span>
+            <span class="nav-item-text">Gallery</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="franchise.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-handshake"></i></span>
+            <span class="nav-item-text">Franchise</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="blog.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-newspaper"></i></span>
+            <span class="nav-item-text">Blog</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="contact.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-map-location-dot"></i></span>
+            <span class="nav-item-text">Contact Us</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Drawer Action Footer -->
+        <div class="mobile-drawer-footer">
+          <button class="btn btn-enquire" onclick="openEnquiryModal('Gallery Page Header Enquiry'); toggleMobileNav();">
+            <i class="fa-solid fa-paper-plane"></i> Enquire Now
+          </button>
+          <div class="drawer-quick-contacts">
+            <a href="tel:+918638757905" class="drawer-contact-pill">
+              <i class="fa-solid fa-phone" style="color: #10b981;"></i> <span>Call Desk</span>
+            </a>
+            <a href="https://wa.me/918638757905" target="_blank" rel="noopener" class="drawer-contact-pill whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
+            </a>
+          </div>
+          <div class="drawer-locations-tag">
+            <i class="fa-solid fa-location-dot"></i> Dibrugarh & Tezpur Campuses
+          </div>
+        </div>
+      </nav>
+
+      <!-- Right Header Actions (Enquire Button & Mobile Toggle) -->
+      <div class="header-actions">
+        <button class="btn btn-enquire" onclick="openEnquiryModal('Gallery Page Header Enquiry')">
+          <i class="fa-solid fa-paper-plane"></i> Enquire Now
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Dimmed Backdrop Overlay -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="toggleMobileNav()"></div>
+
+  <!-- INNER HERO BANNER -->
+  <section class="inner-hero-banner">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <span>/</span>
+        <span>Campus Gallery</span>
+      </div>
+      <h1 class="inner-hero-title">Life at Scholar Academy & Event Moments</h1>
+      <p class="inner-hero-desc">
+        Glimpses of high-tech classrooms, library study sessions, topper felicitations, orientation seminars, and student life across our Dibrugarh & Tezpur centres.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN GALLERY SECTION -->
+  <section class="section-py" style="background: #f8fafc;">
+    <div class="container">
+
+      <!-- FILTER TABS -->
+      <div class="gallery-filter-bar">
+        <button class="filter-btn active" onclick="filterGallery('all', this)">
+          <i class="fa-solid fa-border-all"></i> All Photos (<span id="countAll">0</span>)
+        </button>
+        <button class="filter-btn" onclick="filterGallery('events', this)">
+          <i class="fa-solid fa-bullhorn"></i> Events & Seminars (<span id="countEvents">0</span>)
+        </button>
+        <button class="filter-btn" onclick="filterGallery('classrooms', this)">
+          <i class="fa-solid fa-chalkboard-user"></i> Classrooms & Labs (<span id="countClassrooms">0</span>)
+        </button>
+        <button class="filter-btn" onclick="filterGallery('toppers', this)">
+          <i class="fa-solid fa-trophy"></i> Toppers & Felicitation (<span id="countToppers">0</span>)
+        </button>
+        <button class="filter-btn" onclick="filterGallery('campus', this)">
+          <i class="fa-solid fa-building-columns"></i> Centres & Campus (<span id="countCampus">0</span>)
+        </button>
+      </div>
+
+      <!-- PHOTOS GRID -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL FOR FULLSCREEN PREVIEW -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content-box" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" title="Close viewer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="lightbox-img-holder">
+        <img src="" id="lightboxImg" alt="Enlarged Campus Photo">
+      </div>
+      <div class="lightbox-info">
+        <div>
+          <h3 id="lightboxTitle" style="color: #0b2545; font-size: 1.25rem; margin-bottom: 0.3rem;"></h3>
+          <span id="lightboxCategory" class="section-tag" style="padding: 0.2rem 0.7rem; font-size: 0.75rem;"></span>
+        </div>
+        <button class="btn btn-blue btn-sm" onclick="openEnquiryModal('Enquiry from Gallery Viewer')">
+          <i class="fa-solid fa-paper-plane"></i> Book Campus Visit
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-badge" aria-label="Scholar Academy of Learning">
+            <img src="assets/logo.svg" alt="Scholar Academy of Learning">
+          </a>
+          <p>Assam's trusted academy for civil services, state government recruitment, central exams and competitive courses in Dibrugarh & Tezpur.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Courses</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html">APSC Foundation Course</a></li>
+            <li><a href="courses.html">ADRE 2.0 (Grade III & IV)</a></li>
+            <li><a href="courses.html">SSC CGL / CHSL / MTS</a></li>
+            <li><a href="courses.html">Banking (IBPS / SBI PO)</a></li>
+            <li><a href="courses.html">Assam TET Preparation</a></li>
+            <li><a href="courses.html">Other Courses (Railways/Defence)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learning Centres</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Dibrugarh Campus (Lachit Nagar)</a></li>
+            <li><a href="contact.html">Tezpur Campus (Murha Teteli)</a></li>
+            <li><a href="gallery.html">Campus Photo Gallery</a></li>
+            <li><a href="https://salonlinetest.in/" target="_blank" rel="noopener">Online Mock Test Portal</a></li>
+            <li><a href="franchise.html">Franchise Opportunities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Helpline</h4>
+          <p style="margin-bottom: 0.8rem; font-size: 0.875rem;">Call our academic counselors for batch timings & fee details:</p>
+          <div style="font-size: 1.35rem; font-weight: 800; color: #facc15; margin-bottom: 1rem;">
+            <i class="fa-solid fa-phone"></i> 8638757905
+          </div>
+          <button class="btn btn-blue btn-sm" onclick="openEnquiryModal('Quick Callback Request')">
+            Request Callback
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer Maps Section -->
+      <div class="footer-maps-section">
+        <h4 class="footer-maps-main-title"><i class="fa-solid fa-map-location-dot" style="color: #facc15; margin-right: 8px;"></i> Visit Our Learning Centres</h4>
+        <div class="footer-maps-grid">
+          
+          <!-- Dibrugarh Centre Map -->
+          <div class="footer-map-card">
+            <div class="footer-map-header">
+              <div class="footer-map-title">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Dibrugarh Campus</span>
+              </div>
+              <span class="footer-map-badge">Lachit Nagar</span>
+            </div>
+            <div class="footer-map-frame">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.8542121575188!2d94.91475647598593!3d27.473797735752672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37409803c441c433%3A0xe773a5e9b5bfd597!2sScholar%20Academy%20Of%20Learning!5e0!3m2!1sen!2sin!4v1788760365635!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Scholar Academy Of Learning - Dibrugarh Campus"></iframe>
+            </div>
+          </div>
+
+          <!-- Tezpur Centre Map -->
+          <div class="footer-map-card">
+            <div class="footer-map-header">
+              <div class="footer-map-title">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Tezpur Campus</span>
+              </div>
+              <span class="footer-map-badge">Murha Teteli</span>
+            </div>
+            <div class="footer-map-frame">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.3727669557165!2d92.78225947596468!3d26.636544771903342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744e91b5538071b%3A0xfa28cb197b8c0551!2sScholar%20Academy%20of%20Learning!5e0!3m2!1sen!2sin!4v1788760601200!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Scholar Academy of Learning - Tezpur Campus"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Scholar Academy of Learning. All Rights Reserved.</p>
+        <div class="footer-social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ADMISSION ENQUIRY MODAL -->
+  <div class="enquiry-modal-overlay" id="enquiryModal" onclick="closeEnquiryModal(event)">
+    <div class="enquiry-modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-size: 1.3rem; color: #0b2545; font-weight: 800;">Book Free Academic Consultation</h3>
+          <p style="color: #64748b; font-size: 0.85rem;" id="modalContextText">Connect with our senior faculty advisors</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeEnquiryModal()" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="enquiryForm" onsubmit="handleEnquirySubmit(event)">
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.3rem;">Full Name *</label>
+          <input type="text" required placeholder="Enter student's name" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: var(--radius-md); font-family: var(--font-body);" id="enquiryName">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.3rem;">WhatsApp Mobile Number *</label>
+          <input type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: var(--radius-md); font-family: var(--font-body);" id="enquiryPhone">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+          <div>
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.3rem;">Course Interest *</label>
+            <input type="text" placeholder="e.g. APSC, ADRE, Banking, SSC" required autocomplete="off" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: var(--radius-md); font-family: var(--font-body);" id="enquiryCourse">
+          </div>
+
+          <div>
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.3rem;">Preferred Centre</label>
+            <select style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: var(--radius-md); font-family: var(--font-body);" id="enquiryCentre">
+              <option value="Dibrugarh">Dibrugarh Campus (Lachit Nagar)</option>
+              <option value="Tezpur">Tezpur Campus (Murha Teteli)</option>
+              <option value="Online">Live Online Batches</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-blue" style="width: 100%; justify-content: center; padding: 0.9rem; font-size: 1rem;">
+          <i class="fa-solid fa-paper-plane"></i> Submit Details & Get Free Syllabus
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    // PRESET DEFAULT GALLERY PHOTOS
+    // ==========================================
+    const DEFAULT_PHOTOS = [
+      {
+        id: "wa-teachers-day",
+        title: "Teachers' Day Celebration & Cake Cutting Ceremony",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "Sept 2026",
+        centre: "Scholar Academy Campus",
+        imgUrl: "assets/teachers_day.jpeg",
+        isUserUploaded: false
+      },
+      {
+        id: "cam-1",
+        title: "Grand Orientation Seminar & Civil Services Guidance Hall",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "2026",
+        centre: "Academy Auditorium",
+        imgUrl: "assets/480172418_1060133646129724_9130294797743525390_n.jpg",
+        isUserUploaded: false
+      },
+      {
+        id: "cam-2",
+        title: "Faculty Mentors & Student Batch at Main Campus Entrance",
+        category: "campus",
+        categoryLabel: "Centres & Campus",
+        date: "2026",
+        centre: "Scholar Academy Campus",
+        imgUrl: "assets/480177801_1060133959463026_2852906001993389889_n.jpg",
+        isUserUploaded: false
+      },
+      {
+        id: "cam-3",
+        title: "Saraswati Puja 2026 Celebration & Campus Gathering",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "2026",
+        centre: "Scholar Academy Campus",
+        imgUrl: "assets/620998064_18163954141400324_3549904449412367231_n.jpg",
+        isUserUploaded: false
+      },
+      {
+        id: "wa-3",
+        title: "Saraswati Puja 2023 Celebration & Festive Honors",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "2023",
+        centre: "Scholar Academy",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.09.18 PM.jpeg",
+        isUserUploaded: false
+      },
+      {
+        id: "wa-4",
+        title: "Class Session",
+        category: "classrooms",
+        categoryLabel: "Classrooms & Labs",
+        date: "Sept 2026",
+        centre: "Scholar Academy",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.09.17 PM.jpeg",
+        isUserUploaded: false
+      },
+      {
+        id: "wa-5",
+        title: "Saraswati Puja 2024 Celebration",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "2024",
+        centre: "Scholar Academy",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.09.18 PM (1).jpeg",
+        isUserUploaded: false
+      },
+      {
+        id: "wa-6",
+        title: "Academic Milestone & Mentorship Team Gathering",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "Sept 2026",
+        centre: "Scholar Academy",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.09.18 PM (2).jpeg",
+        isUserUploaded: false
+      },
+
+      {
+        id: "wa-8",
+        title: "Mekhela Sador Cultural Attire Day by Scholar Aspirants",
+        category: "campus",
+        categoryLabel: "Centres & Campus",
+        date: "Sept 2026",
+        centre: "Scholar Academy Campus",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.11.53 PM.jpeg",
+        isUserUploaded: false
+      },
+
+      {
+        id: "wa-11",
+        title: "Students & Staff Annual Picnic",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "2026",
+        centre: "Scholar Academy Annual Picnic",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.11.53 PM (1).jpeg",
+        isUserUploaded: false
+      },
+      {
+        id: "wa-12",
+        title: "Students & Staff Annual Picnic Tour",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "2026",
+        centre: "Students & Staff Annual Picnic",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.21.34 PM.jpeg",
+        isUserUploaded: false
+      },
+      {
+        id: "wa-13",
+        title: "Students & Staff Picnic Gathering",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "2026",
+        centre: "Students & Staff Annual Picnic",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.21.35 PM.jpeg",
+        isUserUploaded: false
+      },
+      {
+        id: "wa-14",
+        title: "Teachers' Day Celebration",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "Sept 2026",
+        centre: "Scholar Academy Campus",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.21.38 PM.jpeg",
+        isUserUploaded: false
+      },
+
+      {
+        id: "wa-16",
+        title: "Intensive Classroom Batch & Live Lecture Session",
+        category: "classrooms",
+        categoryLabel: "Classrooms & Labs",
+        date: "Sept 2026",
+        centre: "Scholar Academy Centre",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.39.49 PM.jpeg",
+        isUserUploaded: false
+      },
+      {
+        id: "wa-17",
+        title: "Academic Exhibition, Study Material & Career Counselling Desk",
+        category: "events",
+        categoryLabel: "Events & Seminars",
+        date: "Sept 2026",
+        centre: "Career Seminar & Expo",
+        imgUrl: "assets/WhatsApp Image 2026-09-07 at 1.39.49 PM (1).jpeg",
+        isUserUploaded: false
+      }
+    ];
+
+    let currentFilter = 'all';
+
+    function getAllPhotos() {
+      return DEFAULT_PHOTOS;
+    }
+
+    // Render Gallery
+    function renderGallery() {
+      const allPhotos = getAllPhotos();
+      const galleryGrid = document.getElementById('galleryGrid');
+
+      // Update counters
+      document.getElementById('countAll').textContent = allPhotos.length;
+      document.getElementById('countEvents').textContent = allPhotos.filter(p => p.category === 'events').length;
+      document.getElementById('countClassrooms').textContent = allPhotos.filter(p => p.category === 'classrooms').length;
+      document.getElementById('countToppers').textContent = allPhotos.filter(p => p.category === 'toppers').length;
+      document.getElementById('countCampus').textContent = allPhotos.filter(p => p.category === 'campus').length;
+
+      // Filtered items
+      const visiblePhotos = currentFilter === 'all' 
+        ? allPhotos 
+        : allPhotos.filter(p => p.category === currentFilter);
+
+      if (visiblePhotos.length === 0) {
+        galleryGrid.innerHTML = `
+          <div class="empty-gallery-state" style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem;">
+            <i class="fa-solid fa-camera-retro" style="font-size: 3rem; color: #cbd5e1; margin-bottom: 1rem;"></i>
+            <h4 style="color: #0b2545; margin-bottom: 0.5rem;">No Photos Found in this Category</h4>
+            <p style="color: #64748b;">More photos will be added soon.</p>
+          </div>
+        `;
+        return;
+      }
+
+      galleryGrid.innerHTML = visiblePhotos.map(photo => `
+        <div class="gallery-card" data-category="${photo.category}">
+          <div class="gallery-card-img-wrap" onclick="openLightboxById('${photo.id}')">
+            <span class="gallery-card-badge">${photo.categoryLabel}</span>
+            <img src="${photo.imgUrl}" alt="${escapeHtml(photo.title)}" loading="lazy">
+            <div class="gallery-card-overlay">
+              <span style="color: #ffffff; font-size: 0.85rem; font-weight: 600;">
+                <i class="fa-solid fa-expand" style="margin-right: 4px;"></i> Tap to enlarge
+              </span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <h4 class="gallery-card-title">${escapeHtml(photo.title)}</h4>
+            <div class="gallery-card-meta">
+              <span><i class="fa-solid fa-location-dot" style="color: var(--primary-blue); margin-right: 4px;"></i> ${photo.centre || 'Scholar Academy'}</span>
+              <button class="gallery-view-btn" onclick="openLightboxById('${photo.id}')">
+                View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Escape HTML helper
+    function escapeHtml(text) {
+      if (!text) return '';
+      return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    // Filter Gallery
+    function filterGallery(category, btnElement) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btnElement) btnElement.classList.add('active');
+      renderGallery();
+    }
+
+    // Lightbox Controls
+    function openLightboxById(photoId) {
+      const allPhotos = getAllPhotos();
+      const photo = allPhotos.find(p => p.id === photoId);
+      if (!photo) return;
+      const modal = document.getElementById('lightboxModal');
+      document.getElementById('lightboxImg').src = photo.imgUrl;
+      document.getElementById('lightboxTitle').textContent = photo.title;
+      document.getElementById('lightboxCategory').textContent = photo.categoryLabel;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openLightbox(imgSrc, title, category) {
+      const modal = document.getElementById('lightboxModal');
+      document.getElementById('lightboxImg').src = imgSrc;
+      document.getElementById('lightboxTitle').textContent = title;
+      document.getElementById('lightboxCategory').textContent = category;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target !== e.currentTarget && !e.target.closest('.lightbox-close-btn')) return;
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Navigation Drawer
+    function toggleMobileNav() {
+      const nav = document.getElementById('mainNav');
+      const btn = document.getElementById('mobileMenuBtn');
+      let backdrop = document.getElementById('mobileNavBackdrop');
+      
+      if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.id = 'mobileNavBackdrop';
+        backdrop.className = 'mobile-nav-backdrop';
+        backdrop.onclick = toggleMobileNav;
+        document.body.appendChild(backdrop);
+      }
+
+      if (nav) {
+        const isActive = nav.classList.toggle('active');
+        backdrop.classList.toggle('active', isActive);
+        if (btn) btn.classList.toggle('active', isActive);
+        document.body.classList.toggle('mobile-nav-open', isActive);
+      }
+    }
+
+    // Auto-close mobile nav when a nav link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('mainNav');
+        const backdrop = document.getElementById('mobileNavBackdrop');
+        const btn = document.getElementById('mobileMenuBtn');
+        if (nav && nav.classList.contains('active')) {
+          nav.classList.remove('active');
+          if (backdrop) backdrop.classList.remove('active');
+          if (btn) btn.classList.remove('active');
+          document.body.classList.remove('mobile-nav-open');
+        }
+      });
+    });
+
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const nav = document.getElementById('mainNav');
+        const backdrop = document.getElementById('mobileNavBackdrop');
+        const btn = document.getElementById('mobileMenuBtn');
+        if (nav && nav.classList.contains('active')) {
+          nav.classList.remove('active');
+          if (backdrop) backdrop.classList.remove('active');
+          if (btn) btn.classList.remove('active');
+          document.body.classList.remove('mobile-nav-open');
+        }
+      }
+    });
+
+    // Announcement dismiss
+    function dismissAnnouncement() {
+      const bar = document.getElementById('announcementBar');
+      if (bar) bar.style.display = 'none';
+    }
+
+    // Modal Enquiry
+    function openEnquiryModal(context) {
+      const modal = document.getElementById('enquiryModal');
+      const ctxText = document.getElementById('modalContextText');
+      if (ctxText && context) {
+        ctxText.textContent = context;
+      }
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeEnquiryModal(e) {
+      if (e && e.target !== e.currentTarget && !e.target.closest('.modal-close-btn')) return;
+      const modal = document.getElementById('enquiryModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function handleEnquirySubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your academic consultation enquiry has been recorded. Our team will contact you shortly.');
+      closeEnquiryModal();
+      document.getElementById('enquiryForm').reset();
+    }
+
+    // Initialize gallery on load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderGallery();
+    });
+  </script>
+</body>
+</html>

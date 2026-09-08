@@ -1,0 +1,9 @@
+# Robots.txt for Scholar Academy of Learning (salcoaching.in)
+User-agent: *
+Allow: /
+
+# Disallow internal script or scratch files if any
+Disallow: /scratch/
+
+# XML Sitemap
+Sitemap: https://salcoaching.in/sitemap.xml
