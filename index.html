@@ -1665,18 +1665,23 @@
       const modal = document.getElementById('enquiryModal');
       if (modal) {
         modal.classList.add('active');
+        document.body.classList.add('modal-open');
       }
     }
 
     function closeEnquiryModal() {
       const modal = document.getElementById('enquiryModal');
-      if (modal) modal.classList.remove('active');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+      }
     }
 
     function openVideoModal() {
       const modal = document.getElementById('videoModal');
       const video = document.getElementById('demoVideo');
       modal.classList.add('active');
+      document.body.classList.add('modal-open');
       if (video) {
         video.currentTime = 0;
         const playPromise = video.play();
@@ -1695,6 +1700,7 @@
         video.pause();
       }
       modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
     }
 
     function handleEnquirySubmit(e) {

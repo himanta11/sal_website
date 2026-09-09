@@ -41,6 +41,9 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -49,6 +52,15 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+body.modal-open,
+body:has(.modal-overlay.active) {
+  overflow: hidden !important;
+  touch-action: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1511,8 +1523,13 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
+  max-width: 100%;
   height: 100%;
+  height: 100vh;
+  height: 100dvh;
   background: rgba(11, 28, 55, 0.75);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -1522,6 +1539,10 @@ img {
   padding: 1.25rem;
   opacity: 0;
   transition: opacity 0.25s ease;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
 }
 
 .modal-overlay.active,
@@ -1540,6 +1561,7 @@ img {
   max-height: 90vh;
   max-height: 90dvh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0 25px 60px -12px rgba(11, 37, 69, 0.4), 0 0 0 1px rgba(226, 232, 240, 0.8);
   padding: 2rem 2.2rem;
   position: relative;
@@ -1547,6 +1569,7 @@ img {
   transform: translateY(16px) scale(0.96);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .modal-overlay.active .modal-box,
@@ -1557,15 +1580,27 @@ img {
 @media (max-width: 600px) {
   .modal-overlay,
   .enquiry-modal-overlay {
-    padding: 0.75rem !important;
+    padding: 0.75rem 0.5rem !important;
     align-items: center;
+    justify-content: center;
   }
   .modal-box,
   .enquiry-modal-box {
-    padding: 1.5rem 1.15rem;
-    max-height: 88vh;
-    max-height: 88dvh;
+    padding: 1.35rem 1.1rem;
+    max-height: 85vh;
+    max-height: 85dvh;
     border-radius: 16px;
+    width: 100% !important;
+    max-width: calc(100vw - 1.25rem) !important;
+    margin: auto !important;
+    box-sizing: border-box !important;
+  }
+  .modal-title {
+    font-size: 1.25rem !important;
+  }
+  .modal-subtitle {
+    font-size: 0.82rem !important;
+    margin-bottom: 1rem !important;
   }
 }
 
@@ -1698,10 +1733,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-top: 1rem;
-  font-size: 0.78rem;
+  gap: 8px;
+  margin-top: 0.85rem;
+  font-size: 0.76rem;
   color: #64748b;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .modal-trust-footer a {
@@ -2559,10 +2596,15 @@ body.mobile-nav-open {
   }
 
   /* Modals & Other Components */
-  .modal-box {
-    padding: 1.25rem;
-    width: 92%;
+  .modal-box,
+  .enquiry-modal-box {
+    padding: 1.35rem 1.1rem;
+    width: 100% !important;
+    max-width: calc(100vw - 1.25rem) !important;
     max-height: 85vh;
+    max-height: 85dvh;
+    margin: auto !important;
+    box-sizing: border-box !important;
   }
   .footer-grid {
     grid-template-columns: 1fr;
