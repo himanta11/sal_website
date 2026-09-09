@@ -2053,8 +2053,10 @@ body.mobile-nav-open {
     box-shadow: -10px 0 35px rgba(9, 30, 62, 0.35);
     border: none;
     z-index: 10010 !important;
-    transform: translateX(105%);
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: flex !important;
@@ -2062,6 +2064,8 @@ body.mobile-nav-open {
   }
   .nav-links.active {
     transform: translateX(0) !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
   }
   .nav-links .nav-link.active::after {
     display: none;
@@ -2621,6 +2625,9 @@ body.mobile-nav-open {
   .top-announcement-bar {
     font-size: 0.78rem;
     padding: 0.45rem 0;
+  }
+  .top-announcement-bar .announcement-container {
+    padding-right: 2.2rem !important;
   }
   .about-home-spotlight {
     padding: 3rem 0;
