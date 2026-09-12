@@ -618,8 +618,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
-  padding-right: 2rem;
+  width: 100%;
 }
 
 .ribbon-stat-item {
@@ -690,19 +689,6 @@ img {
   font-size: 2.2rem;
   font-weight: 800;
   color: #0b2545;
-  position: relative;
-  display: inline-block;
-}
-
-.courses-main-title::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 45px;
-  height: 4px;
-  background: var(--primary-blue);
-  border-radius: 2px;
 }
 
 .courses-pastel-grid {

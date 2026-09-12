@@ -8,8 +8,8 @@
   <meta name="keywords" content="Scholar Academy gallery, coaching campus photos, Dibrugarh academy photos, Tezpur coaching photos, felicitation ceremony, APSC coaching classroom, salcoaching">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://salcoaching.in/gallery.html">
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-  <link rel="apple-touch-icon" href="assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
   <meta name="theme-color" content="#003882">
 
   <!-- Local / Geo-Targeting SEO -->
@@ -484,24 +484,7 @@
   <section class="section-py" style="background: #f8fafc;">
     <div class="container">
 
-      <!-- FILTER TABS -->
-      <div class="gallery-filter-bar">
-        <button class="filter-btn active" onclick="filterGallery('all', this)">
-          <i class="fa-solid fa-border-all"></i> All Photos (<span id="countAll">0</span>)
-        </button>
-        <button class="filter-btn" onclick="filterGallery('events', this)">
-          <i class="fa-solid fa-bullhorn"></i> Events & Seminars (<span id="countEvents">0</span>)
-        </button>
-        <button class="filter-btn" onclick="filterGallery('classrooms', this)">
-          <i class="fa-solid fa-chalkboard-user"></i> Classrooms & Labs (<span id="countClassrooms">0</span>)
-        </button>
-        <button class="filter-btn" onclick="filterGallery('toppers', this)">
-          <i class="fa-solid fa-trophy"></i> Toppers & Felicitation (<span id="countToppers">0</span>)
-        </button>
-        <button class="filter-btn" onclick="filterGallery('campus', this)">
-          <i class="fa-solid fa-building-columns"></i> Centres & Campus (<span id="countCampus">0</span>)
-        </button>
-      </div>
+
 
       <!-- PHOTOS GRID -->
       <div class="gallery-grid" id="galleryGrid">
@@ -844,12 +827,17 @@
       const allPhotos = getAllPhotos();
       const galleryGrid = document.getElementById('galleryGrid');
 
-      // Update counters
-      document.getElementById('countAll').textContent = allPhotos.length;
-      document.getElementById('countEvents').textContent = allPhotos.filter(p => p.category === 'events').length;
-      document.getElementById('countClassrooms').textContent = allPhotos.filter(p => p.category === 'classrooms').length;
-      document.getElementById('countToppers').textContent = allPhotos.filter(p => p.category === 'toppers').length;
-      document.getElementById('countCampus').textContent = allPhotos.filter(p => p.category === 'campus').length;
+      // Update counters if elements exist
+      const countAll = document.getElementById('countAll');
+      if (countAll) countAll.textContent = allPhotos.length;
+      const countEvents = document.getElementById('countEvents');
+      if (countEvents) countEvents.textContent = allPhotos.filter(p => p.category === 'events').length;
+      const countClassrooms = document.getElementById('countClassrooms');
+      if (countClassrooms) countClassrooms.textContent = allPhotos.filter(p => p.category === 'classrooms').length;
+      const countToppers = document.getElementById('countToppers');
+      if (countToppers) countToppers.textContent = allPhotos.filter(p => p.category === 'toppers').length;
+      const countCampus = document.getElementById('countCampus');
+      if (countCampus) countCampus.textContent = allPhotos.filter(p => p.category === 'campus').length;
 
       // Filtered items
       const visiblePhotos = currentFilter === 'all' 
@@ -1020,5 +1008,7 @@
       renderGallery();
     });
   </script>
+  <!-- Web3Forms Integration -->
+  <script src="web3forms.js"></script>
 </body>
 </html>
