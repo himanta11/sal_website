@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Do not rewrite existing physical files or directories (css, js, images, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 2. Rewrite clean /courses to courses.html
+  RewriteRule ^courses/?$ courses.html [L,QSA]
+
+  # 3. Rewrite /courses/{category} to courses.html?category={category}
+  RewriteRule ^courses/([a-zA-Z0-9_-]+)/?$ courses.html?category=$1 [L,QSA]
+
+  # 4. Rewrite /courses.html/{category} to courses.html?category={category}
+  RewriteRule ^courses\.html/([a-zA-Z0-9_-]+)/?$ courses.html?category=$1 [L,QSA]
+
+  # 5. Clean URLs for other pages (e.g. /about -> about.html)
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^([^/]+)/?$ $1.html [L,QSA]
+</IfModule>

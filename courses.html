@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses & Coaching Batches | Scholar Academy of Learning</title>
   <meta name="description" content="Explore classroom & offline coaching programs for APSC Foundation Course, ADRE 2.0, SSC CGL/CHSL, Banking PO, Assam TET, Railways & Computer Diplomas in Dibrugarh & Tezpur.">
@@ -717,7 +718,7 @@
           </li>
           <li class="display-path-separator"><i class="fa-solid fa-chevron-right"></i></li>
           <li class="display-path-item">
-            <a href="courses.html" onclick="filterCourses('all', null, true); return false;" class="display-path-link">Courses</a>
+            <a href="courses" onclick="filterCourses('all', null, true); return false;" class="display-path-link">Courses</a>
           </li>
           <li class="display-path-separator"><i class="fa-solid fa-chevron-right"></i></li>
           <li class="display-path-item active" aria-current="page">
@@ -790,12 +791,12 @@
         <div class="footer-col">
           <h4>Our Courses</h4>
           <ul class="footer-links">
-            <li><a href="courses.html?category=apsc" onclick="filterCourses('apsc', null, true); return false;">APSC Foundation Course</a></li>
-            <li><a href="courses.html?category=adre" onclick="filterCourses('adre', null, true); return false;">ADRE 2.0 (Grade III & IV)</a></li>
-            <li><a href="courses.html?category=ssc" onclick="filterCourses('ssc', null, true); return false;">SSC CGL / CHSL / MTS</a></li>
-            <li><a href="courses.html?category=banking" onclick="filterCourses('banking', null, true); return false;">Banking (IBPS / SBI PO)</a></li>
-            <li><a href="courses.html?category=tet" onclick="filterCourses('tet', null, true); return false;">Assam TET Preparation</a></li>
-            <li><a href="courses.html?category=other" onclick="filterCourses('other', null, true); return false;">Other Courses (Railways/Defence)</a></li>
+            <li><a href="courses/apsc" onclick="filterCourses('apsc', null, true); return false;">APSC Foundation Course</a></li>
+            <li><a href="courses/adre" onclick="filterCourses('adre', null, true); return false;">ADRE 2.0 (Grade III & IV)</a></li>
+            <li><a href="courses/ssc" onclick="filterCourses('ssc', null, true); return false;">SSC CGL / CHSL / MTS</a></li>
+            <li><a href="courses/banking" onclick="filterCourses('banking', null, true); return false;">Banking (IBPS / SBI PO)</a></li>
+            <li><a href="courses/tet" onclick="filterCourses('tet', null, true); return false;">Assam TET Preparation</a></li>
+            <li><a href="courses/other" onclick="filterCourses('other', null, true); return false;">Other Courses (Railways/Defence)</a></li>
           </ul>
         </div>
 
@@ -1469,9 +1470,32 @@
       initCoursesPage();
     });
 
-    function initCoursesPage() {
+    function getCategoryFromLocation() {
+      // 1. Path segment check: /courses/ssc or /courses.html/ssc
+      const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, '');
+      const segments = cleanPath.split('/');
+      if (segments.length >= 2 && (segments[0] === 'courses' || segments[0] === 'courses.html')) {
+        const catSlug = segments[1].toLowerCase();
+        if (CATEGORY_INFO[catSlug]) return catSlug;
+      }
+
+      // 2. Query param check: ?category=ssc or ?cat=ssc
       const params = new URLSearchParams(window.location.search);
-      const catParam = params.get('category') || params.get('cat') || (window.location.hash ? window.location.hash.replace('#', '') : null);
+      const queryCat = (params.get('category') || params.get('cat') || '').toLowerCase();
+      if (CATEGORY_INFO[queryCat]) return queryCat;
+
+      // 3. Hash check: #ssc
+      if (window.location.hash) {
+        const hashCat = window.location.hash.replace('#', '').toLowerCase();
+        if (CATEGORY_INFO[hashCat]) return hashCat;
+      }
+
+      return 'all';
+    }
+
+    function initCoursesPage() {
+      const activeCat = getCategoryFromLocation();
+      const params = new URLSearchParams(window.location.search);
       const searchParam = params.get('q') || params.get('search');
 
       let shouldScrollToBatches = false;
@@ -1483,8 +1507,8 @@
         shouldScrollToBatches = true;
       }
 
-      if (catParam && CATEGORY_INFO[catParam]) {
-        filterCourses(catParam, null, false);
+      if (activeCat && activeCat !== 'all' && CATEGORY_INFO[activeCat]) {
+        filterCourses(activeCat, null, false);
         shouldScrollToBatches = true;
       } else {
         renderCourses();
@@ -1502,8 +1526,8 @@
 
     // Support browser Back/Forward navigation
     window.addEventListener('popstate', () => {
+      const cat = getCategoryFromLocation();
       const params = new URLSearchParams(window.location.search);
-      const cat = params.get('category') || params.get('cat') || 'all';
       const q = params.get('q') || params.get('search') || '';
 
       searchQuery = q;
@@ -1665,17 +1689,16 @@
         }
       });
 
-      // Synchronize browser address bar with category sublink
+      // Synchronize browser address bar with clean path: /courses/category
       if (updateUrl) {
         const url = new URL(window.location.href);
-        if (category === 'all') {
-          url.searchParams.delete('category');
-          url.searchParams.delete('cat');
-        } else {
-          url.searchParams.set('category', category);
-        }
+        url.searchParams.delete('category');
+        url.searchParams.delete('cat');
         url.hash = '';
-        window.history.pushState({ category: category }, '', url.pathname + (url.search ? url.search : ''));
+
+        const cleanSearch = url.search ? url.search : '';
+        const targetPath = (category === 'all') ? '/courses' : `/courses/${encodeURIComponent(category)}`;
+        window.history.pushState({ category: category }, '', targetPath + cleanSearch);
       }
 
       renderCourses();
