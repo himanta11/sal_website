@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exam Strategy Blog & Study Notes | Scholar Academy of Learning</title>
   <meta name="description" content="Read expert exam preparation strategies, Assam GS-V notes, ADRE shortcuts, Vedic math tips and topper interviews on Scholar Academy Blog.">
@@ -322,20 +323,72 @@
     </div>
   </section>
 
-  <!-- BLOG UNDER PREPARATION / COMING SOON -->
-  <section class="section-py" style="background: #f8fafc; min-height: 52vh; display: flex; align-items: center;">
-    <div class="container" style="text-align: center; max-width: 650px; margin: 0 auto; padding: 2rem 1rem;">
-      <div style="width: 80px; height: 80px; background: rgba(13, 110, 253, 0.1); color: var(--primary-blue); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 2.2rem; margin-bottom: 1.5rem;">
-        <i class="fa-solid fa-newspaper"></i>
+  <!-- BLOG ARTICLES SECTION -->
+  <section class="section-py" style="background: #f8fafc; min-height: 55vh;">
+    <div class="container">
+      
+      <!-- Category Filter Pills -->
+      <div class="blog-filter-bar">
+        <button class="filter-btn active" onclick="filterBlogCards('all', this)"><i class="fa-solid fa-layer-group"></i> All Articles</button>
+        <button class="filter-btn" onclick="filterBlogCards('adre', this)"><i class="fa-solid fa-file-lines"></i> ADRE 2027</button>
+        <button class="filter-btn" onclick="filterBlogCards('apsc', this)"><i class="fa-solid fa-landmark-dome"></i> APSC CCE</button>
+        <button class="filter-btn" onclick="filterBlogCards('ssc', this)"><i class="fa-solid fa-award"></i> SSC Exams</button>
+        <button class="filter-btn" onclick="filterBlogCards('banking', this)"><i class="fa-solid fa-building-columns"></i> Banking</button>
       </div>
-      <h2 style="font-size: 2.2rem; color: #0b2545; font-weight: 800; margin-bottom: 0.85rem;">Blog & Exam Updates Coming Soon</h2>
-      <p style="color: #64748b; font-size: 1.05rem; line-height: 1.65; margin-bottom: 2rem;">
-        Our faculty and mentors are curating in-depth syllabus guides, current affairs roundups, and exam preparation strategies. Stay tuned for upcoming articles!
-      </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="courses.html" class="btn btn-blue">Explore Courses &rarr;</a>
-        <a href="contact.html" class="btn btn-outline-video" style="border-color: #cbd5e1; color: #0b2545;">Contact Us</a>
+
+      <!-- Articles Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
+        
+        <!-- Featured Article 1: ADRE 2027 -->
+        <article class="blog-article-card" data-category="adre">
+          <div>
+            <div class="article-meta-row">
+              <span class="job-alert-badge" style="background: #eff6ff; color: var(--primary-blue);">
+                <i class="fa-solid fa-graduation-cap"></i> ADRE 2027 Strategy
+              </span>
+              <span><i class="fa-regular fa-clock"></i> 8 Min Read</span>
+              <span><i class="fa-regular fa-calendar"></i> Updated 2027</span>
+            </div>
+            
+            <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--dark-navy); line-height: 1.35; margin-bottom: 0.85rem;">
+              <a href="blog/adre-preparation-strategy-2027" style="color: inherit; text-decoration: none; transition: var(--transition);">
+                ADRE Preparation Strategy 2027: Complete Study Plan, Syllabus & Exam Tips
+              </a>
+            </h2>
+
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">
+              Preparing for the Assam Direct Recruitment Examination (ADRE)? Discover the complete 6-month study timetable, subject-wise syllabus breakdown, Assam GK roadmap, and mock test tips.
+            </p>
+          </div>
+
+          <div style="border-top: 1px solid #f1f5f9; padding-top: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.84rem; font-weight: 600; color: #94a3b8;">
+              <i class="fa-regular fa-user" style="margin-right: 4px;"></i> Academic Team
+            </span>
+            <a href="blog/adre-preparation-strategy-2027" class="btn btn-blue btn-sm" style="padding: 0.45rem 1rem;">
+              Read Full Guide &rarr;
+            </a>
+          </div>
+        </article>
+
       </div>
+
+      <!-- Free Counseling CTA Banner -->
+      <div style="background: linear-gradient(135deg, #091e3e 0%, #003882 100%); color: #ffffff; border-radius: var(--radius-lg); padding: 3rem 2rem; text-align: center; box-shadow: var(--shadow-md);">
+        <h3 style="font-size: 1.8rem; color: #ffffff; margin-bottom: 0.75rem;">Need Expert Guidance for ADRE 2027?</h3>
+        <p style="color: #cbd5e1; max-width: 580px; margin: 0 auto 1.5rem; font-size: 1rem; line-height: 1.6;">
+          Join ADRE Coaching at Scholar Academy of Learning – Dibrugarh & Tezpur. Speak directly with our mentors for personalized batch schedules and free study counseling.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="tel:+918638757905" class="btn btn-blue" style="background: #facc15; color: #0b2545; font-weight: 800;">
+            <i class="fa-solid fa-phone"></i> Call 8638757905
+          </a>
+          <button class="btn btn-outline-video" style="background: rgba(255,255,255,0.1); color: #ffffff; border-color: rgba(255,255,255,0.3);" onclick="openEnquiryModal('Blog Listing Counseling')">
+            <i class="fa-solid fa-comments"></i> Request Counseling
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -560,6 +613,18 @@
         }
       }
     });
+
+    function filterBlogCards(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      document.querySelectorAll('.blog-article-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
 
     function dismissAnnouncement() {
       const bar = document.getElementById('announcementBar');

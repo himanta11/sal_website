@@ -16,7 +16,10 @@
   # 4. Rewrite /courses.html/{category} to courses.html?category={category}
   RewriteRule ^courses\.html/([a-zA-Z0-9_-]+)/?$ courses.html?category=$1 [L,QSA]
 
-  # 5. Clean URLs for other pages (e.g. /about -> about.html)
+  # 5. Rewrite /blog/{slug} to {slug}.html
+  RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ $1.html [L,QSA]
+
+  # 6. Clean URLs for other pages (e.g. /about -> about.html)
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^([^/]+)/?$ $1.html [L,QSA]
 </IfModule>

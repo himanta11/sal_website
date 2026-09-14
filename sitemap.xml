@@ -29,9 +29,15 @@
   </url>
   <url>
     <loc>https://salcoaching.in/blog.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://salcoaching.in/blog/adre-preparation-strategy-2027</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://salcoaching.in/news-events.html</loc>
