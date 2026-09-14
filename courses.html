@@ -156,6 +156,103 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
+    /* Dynamic Display Path (Breadcrumb) Bar */
+    .display-path-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      padding: 0.85rem 1.4rem;
+      border-radius: var(--radius-md);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      transition: var(--transition);
+    }
+    .display-path-list {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.88rem;
+      color: #64748b;
+      flex-wrap: wrap;
+    }
+    .display-path-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .display-path-link {
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+    }
+    .display-path-link:hover {
+      color: #002b66;
+      text-decoration: underline;
+    }
+    .display-path-separator {
+      color: #cbd5e1;
+      font-size: 0.7rem;
+    }
+    .display-path-item.active {
+      color: #1e293b;
+      font-weight: 700;
+    }
+    .display-path-current {
+      background: #eff6ff;
+      color: var(--primary-blue);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid #dbeafe;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+    .display-path-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #475569;
+      background: #f8fafc;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      border: 1px solid #e2e8f0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .display-path-badge i {
+      color: #10b981;
+      font-size: 0.55rem;
+    }
+    @media (max-width: 768px) {
+      .display-path-nav {
+        padding: 0.7rem 0.95rem;
+        margin-bottom: 1.25rem;
+      }
+      .display-path-list {
+        font-size: 0.82rem;
+        gap: 0.4rem;
+      }
+      .display-path-badge {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
     .filter-tabs-wrapper {
       display: flex;
       flex-direction: row;
@@ -612,22 +709,42 @@
   <section class="section-py" id="courses-grid" style="background: #f8fafc;">
     <div class="container">
       
+      <!-- Interactive Dynamic Display Path (Breadcrumb) -->
+      <nav class="display-path-nav" aria-label="Course Category Breadcrumb">
+        <ol class="display-path-list">
+          <li class="display-path-item">
+            <a href="index.html" class="display-path-link"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li class="display-path-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="display-path-item">
+            <a href="courses.html" onclick="filterCourses('all', null, true); return false;" class="display-path-link">Courses</a>
+          </li>
+          <li class="display-path-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="display-path-item active" aria-current="page">
+            <span class="display-path-current" id="displayPathLabel"><i class="fa-solid fa-graduation-cap"></i> All Coaching Programs</span>
+          </li>
+        </ol>
+        <div class="display-path-badge" id="displayPathCount">
+          <i class="fa-solid fa-circle"></i> Showing <strong>15</strong> batches
+        </div>
+      </nav>
+
       <!-- Interactive Filter Tabs (3 Lines in Mobile) -->
       <div class="filter-tabs-wrapper">
         <div class="filter-tabs-row">
-          <button class="filter-tab-btn active" onclick="filterCourses('all', this)">All Programs</button>
-          <button class="filter-tab-btn" onclick="filterCourses('apsc', this)">APSC CCE</button>
-          <button class="filter-tab-btn" onclick="filterCourses('adre', this)">ADRE 2.0</button>
+          <button class="filter-tab-btn active" data-category="all" onclick="filterCourses('all', this)">All Programs</button>
+          <button class="filter-tab-btn" data-category="apsc" onclick="filterCourses('apsc', this)">APSC CCE</button>
+          <button class="filter-tab-btn" data-category="adre" onclick="filterCourses('adre', this)">ADRE 2.0</button>
         </div>
         <div class="filter-tabs-row">
-          <button class="filter-tab-btn" onclick="filterCourses('ssc', this)">SSC (CGL/CHSL)</button>
-          <button class="filter-tab-btn" onclick="filterCourses('banking', this)">Banking (PO/Clerk)</button>
-          <button class="filter-tab-btn" onclick="filterCourses('tet', this)">Assam TET</button>
+          <button class="filter-tab-btn" data-category="ssc" onclick="filterCourses('ssc', this)">SSC (CGL/CHSL)</button>
+          <button class="filter-tab-btn" data-category="banking" onclick="filterCourses('banking', this)">Banking (PO/Clerk)</button>
+          <button class="filter-tab-btn" data-category="tet" onclick="filterCourses('tet', this)">Assam TET</button>
         </div>
         <div class="filter-tabs-row">
-          <button class="filter-tab-btn" onclick="filterCourses('other', this)">Railways & Defence</button>
-          <button class="filter-tab-btn" onclick="filterCourses('ugc-net', this)">UGC NET</button>
-          <button class="filter-tab-btn" onclick="filterCourses('computer', this)">Computer & Diploma</button>
+          <button class="filter-tab-btn" data-category="other" onclick="filterCourses('other', this)">Railways & Defence</button>
+          <button class="filter-tab-btn" data-category="ugc-net" onclick="filterCourses('ugc-net', this)">UGC NET</button>
+          <button class="filter-tab-btn" data-category="computer" onclick="filterCourses('computer', this)">Computer & Diploma</button>
         </div>
       </div>
 
@@ -673,12 +790,12 @@
         <div class="footer-col">
           <h4>Our Courses</h4>
           <ul class="footer-links">
-            <li><a href="courses.html">APSC Foundation Course</a></li>
-            <li><a href="courses.html">ADRE 2.0 (Grade III & IV)</a></li>
-            <li><a href="courses.html">SSC CGL / CHSL / MTS</a></li>
-            <li><a href="courses.html">Banking (IBPS / SBI PO)</a></li>
-            <li><a href="courses.html">Assam TET Preparation</a></li>
-            <li><a href="courses.html">Other Courses (Railways/Defence)</a></li>
+            <li><a href="courses.html?category=apsc" onclick="filterCourses('apsc', null, true); return false;">APSC Foundation Course</a></li>
+            <li><a href="courses.html?category=adre" onclick="filterCourses('adre', null, true); return false;">ADRE 2.0 (Grade III & IV)</a></li>
+            <li><a href="courses.html?category=ssc" onclick="filterCourses('ssc', null, true); return false;">SSC CGL / CHSL / MTS</a></li>
+            <li><a href="courses.html?category=banking" onclick="filterCourses('banking', null, true); return false;">Banking (IBPS / SBI PO)</a></li>
+            <li><a href="courses.html?category=tet" onclick="filterCourses('tet', null, true); return false;">Assam TET Preparation</a></li>
+            <li><a href="courses.html?category=other" onclick="filterCourses('other', null, true); return false;">Other Courses (Railways/Defence)</a></li>
           </ul>
         </div>
 
@@ -1333,12 +1450,91 @@
       }
     ];
 
+    const CATEGORY_INFO = {
+      'all': { name: 'All Programs', label: 'All Coaching Programs', icon: 'fa-graduation-cap' },
+      'apsc': { name: 'APSC CCE', label: 'APSC CCE (Civil Services)', icon: 'fa-landmark-dome' },
+      'adre': { name: 'ADRE 2.0', label: 'ADRE 2.0 (Grade III & IV)', icon: 'fa-file-lines' },
+      'ssc': { name: 'SSC (CGL/CHSL)', label: 'SSC (CGL, CHSL, GD)', icon: 'fa-award' },
+      'banking': { name: 'Banking (PO/Clerk)', label: 'Banking & Insurance (IBPS, SBI, LIC)', icon: 'fa-building-columns' },
+      'tet': { name: 'Assam TET', label: 'Assam TET (LP & UP)', icon: 'fa-chalkboard-user' },
+      'other': { name: 'Railways & Defence', label: 'Railways (RRB) & Defence', icon: 'fa-train-subway' },
+      'ugc-net': { name: 'UGC NET', label: 'UGC NET & JRF', icon: 'fa-book-open-reader' },
+      'computer': { name: 'Computer & Diploma', label: 'Computer Diplomas (PGDCA, DCA, Tally)', icon: 'fa-laptop-code' }
+    };
+
     let currentCategory = 'all';
     let searchQuery = '';
 
     document.addEventListener('DOMContentLoaded', () => {
-      renderCourses();
+      initCoursesPage();
     });
+
+    function initCoursesPage() {
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get('category') || params.get('cat') || (window.location.hash ? window.location.hash.replace('#', '') : null);
+      const searchParam = params.get('q') || params.get('search');
+
+      let shouldScrollToBatches = false;
+
+      if (searchParam) {
+        searchQuery = searchParam.trim();
+        const input = document.getElementById('courseSearchInput');
+        if (input) input.value = searchParam.trim();
+        shouldScrollToBatches = true;
+      }
+
+      if (catParam && CATEGORY_INFO[catParam]) {
+        filterCourses(catParam, null, false);
+        shouldScrollToBatches = true;
+      } else {
+        renderCourses();
+      }
+
+      if (shouldScrollToBatches) {
+        setTimeout(() => {
+          const grid = document.getElementById('courses-grid');
+          if (grid) {
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 120);
+      }
+    }
+
+    // Support browser Back/Forward navigation
+    window.addEventListener('popstate', () => {
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get('category') || params.get('cat') || 'all';
+      const q = params.get('q') || params.get('search') || '';
+
+      searchQuery = q;
+      const input = document.getElementById('courseSearchInput');
+      if (input) input.value = q;
+
+      filterCourses(cat, null, false);
+    });
+
+    function updateDisplayPath(count) {
+      const labelEl = document.getElementById('displayPathLabel');
+      const countEl = document.getElementById('displayPathCount');
+
+      let icon = 'fa-graduation-cap';
+      let labelText = 'All Coaching Programs';
+
+      if (searchQuery && searchQuery.trim()) {
+        icon = 'fa-magnifying-glass';
+        labelText = `Search: "${escapeHtml(searchQuery.trim())}"`;
+      } else if (CATEGORY_INFO[currentCategory]) {
+        icon = CATEGORY_INFO[currentCategory].icon;
+        labelText = CATEGORY_INFO[currentCategory].label;
+      }
+
+      if (labelEl) {
+        labelEl.innerHTML = `<i class="fa-solid ${icon}"></i> ${escapeHtml(labelText)}`;
+      }
+      if (countEl) {
+        countEl.innerHTML = `<i class="fa-solid fa-circle"></i> Showing <strong>${count}</strong> batch${count === 1 ? '' : 'es'}`;
+      }
+    }
 
     function renderCourses() {
       const container = document.getElementById('courseCardsGrid');
@@ -1378,6 +1574,9 @@
           statusNotice.style.display = 'none';
         }
       }
+
+      // Update Display Path (Breadcrumb and Counter)
+      updateDisplayPath(filtered.length);
 
       // Empty State Display
       if (filtered.length === 0) {
@@ -1453,10 +1652,32 @@
       `).join('');
     }
 
-    function filterCourses(category, btn) {
+    function filterCourses(category, btn, updateUrl = true) {
+      if (!CATEGORY_INFO[category]) category = 'all';
       currentCategory = category;
-      document.querySelectorAll('.filter-tab-btn').forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
+
+      // Update button active state
+      document.querySelectorAll('.filter-tab-btn').forEach(b => {
+        if (b.getAttribute('data-category') === category || b === btn) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      // Synchronize browser address bar with category sublink
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        if (category === 'all') {
+          url.searchParams.delete('category');
+          url.searchParams.delete('cat');
+        } else {
+          url.searchParams.set('category', category);
+        }
+        url.hash = '';
+        window.history.pushState({ category: category }, '', url.pathname + (url.search ? url.search : ''));
+      }
+
       renderCourses();
     }
 
@@ -1472,10 +1693,13 @@
       }
       searchQuery = term;
       currentCategory = 'all';
-      document.querySelectorAll('.filter-tab-btn').forEach((b, idx) => {
-        if (idx === 0) b.classList.add('active');
-        else b.classList.remove('active');
-      });
+      filterCourses('all', null, true);
+
+      const url = new URL(window.location.href);
+      if (term) url.searchParams.set('q', term);
+      else url.searchParams.delete('q');
+      window.history.pushState({}, '', url.pathname + (url.search ? url.search : ''));
+
       renderCourses();
 
       const grid = document.getElementById('courses-grid');
@@ -1487,7 +1711,14 @@
     function executeCourseSearch() {
       const input = document.getElementById('courseSearchInput');
       if (input) {
-        searchQuery = input.value;
+        searchQuery = input.value.trim();
+        const url = new URL(window.location.href);
+        if (searchQuery) {
+          url.searchParams.set('q', searchQuery);
+        } else {
+          url.searchParams.delete('q');
+        }
+        window.history.pushState({}, '', url.pathname + (url.search ? url.search : ''));
       }
       renderCourses();
       const grid = document.getElementById('courses-grid');
@@ -1500,11 +1731,10 @@
       const input = document.getElementById('courseSearchInput');
       if (input) input.value = '';
       searchQuery = '';
-      currentCategory = 'all';
-      document.querySelectorAll('.filter-tab-btn').forEach((b, idx) => {
-        if (idx === 0) b.classList.add('active');
-        else b.classList.remove('active');
-      });
+      const url = new URL(window.location.href);
+      url.searchParams.delete('q');
+      url.searchParams.delete('search');
+      window.history.pushState({}, '', url.pathname + (url.search ? url.search : ''));
       renderCourses();
     }
 
