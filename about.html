@@ -366,14 +366,228 @@
             <span class="nav-item-text">Home</span>
             <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
           </a>
-          <a href="courses.html" class="nav-link">
-            <span class="nav-item-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-            <span class="nav-item-text">Courses</span>
-            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
-          </a>
+
+          <!-- Courses Dropdown with Sub-Categories Mega Menu -->
+          <div class="nav-item-dropdown" id="coursesDropdown">
+            <div class="nav-link-dropdown-row">
+              <a href="courses.html" class="nav-link nav-link-courses">
+                <span class="nav-item-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <span class="nav-item-text">Courses</span>
+                <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+                <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+              </a>
+              <button type="button" class="drawer-caret-btn" onclick="toggleCoursesAccordion(event)" aria-label="Toggle courses list">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <!-- Desktop Mega Dropdown Menu -->
+            <div class="courses-mega-menu">
+              <div class="mega-menu-header">
+                <div class="mega-header-title">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Target Examination Programs</span>
+                </div>
+                <a href="courses.html" class="mega-header-link">View All Courses &rarr;</a>
+              </div>
+
+              <div class="mega-menu-grid">
+                <!-- APSC -->
+                <a href="apsc-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-apsc"><i class="fa-solid fa-award"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>APSC CCE / ACS</strong>
+                      <span class="mega-tag tag-top">Top Rated</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Prelims</span><span class="dot">&bull;</span><span>Mains</span><span class="dot">&bull;</span><span>Assam GS</span><span class="dot">&bull;</span><span>Test Series</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- ADRE -->
+                <a href="adre-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-adre"><i class="fa-solid fa-users"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>ADRE 2.0 / 3.0</strong>
+                      <span class="mega-tag tag-hot">High Vacancy</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Grade III (Graduate &amp; HS)</span><span class="dot">&bull;</span><span>Grade IV</span><span class="dot">&bull;</span><span>SLRC Syllabus</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- SSC -->
+                <a href="ssc-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-ssc"><i class="fa-solid fa-landmark"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>SSC Coaching</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>CGL</span><span class="dot">&bull;</span><span>CHSL</span><span class="dot">&bull;</span><span>MTS</span><span class="dot">&bull;</span><span>GD Constable</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- RRB Railways -->
+                <a href="rrb-railways-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-rrb"><i class="fa-solid fa-train"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Railways (RRB)</strong>
+                      <span class="mega-tag tag-new">New Batches</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>RRB NTPC</span><span class="dot">&bull;</span><span>Group D</span><span class="dot">&bull;</span><span>ALP &amp; Technician</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Banking -->
+                <a href="banking-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-banking"><i class="fa-solid fa-building-columns"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Banking &amp; Insurance</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>IBPS PO / Clerk</span><span class="dot">&bull;</span><span>SBI PO / Clerk</span><span class="dot">&bull;</span><span>RBI Assistant</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Assam TET -->
+                <a href="tet-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-tet"><i class="fa-solid fa-chalkboard-user"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Assam TET</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>LP &amp; UP TET</span><span class="dot">&bull;</span><span>High School TET</span><span class="dot">&bull;</span><span>Pedagogy</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- UGC NET -->
+                <a href="ugc-net-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-net"><i class="fa-solid fa-book-open-reader"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>UGC NET / SLET</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Paper 1 General Aptitude</span><span class="dot">&bull;</span><span>Teaching &amp; Research</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Computer Diplomas -->
+                <a href="computer-courses.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-computer"><i class="fa-solid fa-computer"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Computer Diplomas</strong>
+                      <span class="mega-tag tag-cert">Govt. Valid</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>PGDCA (1 Year)</span><span class="dot">&bull;</span><span>DCA (6 Months)</span><span class="dot">&bull;</span><span>ADCA</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="mega-menu-footer">
+                <div class="mega-footer-info">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Classroom Batches at <strong>Dibrugarh</strong> &amp; <strong>Tezpur</strong> Campuses</span>
+                </div>
+                <a href="tel:+918638757905" class="mega-footer-phone">
+                  <i class="fa-solid fa-phone"></i> Admissions: 8638757905
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Submenu Accordion -->
+            <div class="mobile-courses-accordion" id="mobileCoursesAccordion">
+              <a href="apsc-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-award"></i>
+                <div class="sub-text-col">
+                  <strong>APSC CCE / ACS</strong>
+                  <span>Prelims, Mains, Assam GS</span>
+                </div>
+              </a>
+              <a href="adre-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-users"></i>
+                <div class="sub-text-col">
+                  <strong>ADRE 2.0 / 3.0</strong>
+                  <span>Grade III &amp; Grade IV</span>
+                </div>
+              </a>
+              <a href="ssc-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-landmark"></i>
+                <div class="sub-text-col">
+                  <strong>SSC (CGL, CHSL, MTS)</strong>
+                  <span>Tier I &amp; Tier II</span>
+                </div>
+              </a>
+              <a href="rrb-railways-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-train"></i>
+                <div class="sub-text-col">
+                  <strong>Railways (RRB NTPC &amp; Group D)</strong>
+                  <span>NTPC, Group D, ALP</span>
+                </div>
+              </a>
+              <a href="banking-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-building-columns"></i>
+                <div class="sub-text-col">
+                  <strong>Banking (IBPS &amp; SBI)</strong>
+                  <span>PO, Clerk &amp; RBI Assistant</span>
+                </div>
+              </a>
+              <a href="tet-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <div class="sub-text-col">
+                  <strong>Assam TET</strong>
+                  <span>LP / UP &amp; High School TET</span>
+                </div>
+              </a>
+              <a href="ugc-net-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <div class="sub-text-col">
+                  <strong>UGC NET / SLET</strong>
+                  <span>Paper 1 General Aptitude</span>
+                </div>
+              </a>
+              <a href="computer-courses.html" class="mobile-sub-link">
+                <i class="fa-solid fa-computer"></i>
+                <div class="sub-text-col">
+                  <strong>Computer Diplomas</strong>
+                  <span>PGDCA, DCA (Govt. Valid)</span>
+                </div>
+              </a>
+              <a href="courses.html" class="mobile-sub-link view-all-mobile">
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="sub-text-col">
+                  <strong>View All Courses &amp; Fees</strong>
+                  <span>Full Course Catalog &rarr;</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
           <a href="about.html" class="nav-link active">
             <span class="nav-item-icon"><i class="fa-solid fa-building-columns"></i></span>
             <span class="nav-item-text">About Us</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="students-zone.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-book-open"></i></span>
+            <span class="nav-item-text">Student Zone</span>
             <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
           </a>
           <a href="https://salonlinetest.in/" target="_blank" rel="noopener" class="nav-link">
@@ -405,7 +619,7 @@
 
         <!-- Mobile Drawer Action Footer -->
         <div class="mobile-drawer-footer">
-          <button class="btn btn-enquire" onclick="openEnquiryModal('About Page Header Enquiry'); toggleMobileNav();">
+          <button class="btn btn-enquire" onclick="openEnquiryModal('Mobile Nav Admission Enquiry'); toggleMobileNav();">
             <i class="fa-solid fa-paper-plane"></i> Enquire Now
           </button>
           <div class="drawer-quick-contacts">
@@ -417,7 +631,7 @@
             </a>
           </div>
           <div class="drawer-locations-tag">
-            <i class="fa-solid fa-location-dot"></i> Dibrugarh & Tezpur Campuses
+            <i class="fa-solid fa-location-dot"></i> Dibrugarh &amp; Tezpur Campuses
           </div>
         </div>
       </nav>
@@ -712,12 +926,14 @@
         <div class="footer-col">
           <h4>Our Courses</h4>
           <ul class="footer-links">
-            <li><a href="courses/apsc">APSC Foundation Course</a></li>
-            <li><a href="courses/adre">ADRE 2.0 (Grade III & IV)</a></li>
-            <li><a href="courses/ssc">SSC CGL / CHSL / MTS</a></li>
-            <li><a href="courses/banking">Banking (IBPS / SBI PO)</a></li>
-            <li><a href="courses/tet">Assam TET Preparation</a></li>
-            <li><a href="courses/other">Other Courses (Railways/Defence)</a></li>
+            <li><a href="apsc-coaching.html">APSC Foundation Course</a></li>
+            <li><a href="adre-coaching.html">ADRE 2.0 (Grade III & IV)</a></li>
+            <li><a href="ssc-coaching.html">SSC CGL / CHSL / MTS</a></li>
+            <li><a href="banking-coaching.html">Banking (IBPS / SBI PO)</a></li>
+            <li><a href="rrb-railways-coaching.html">Railways & Defence Exams</a></li>
+            <li><a href="tet-coaching.html">Assam TET Preparation</a></li>
+            <li><a href="ugc-net-coaching.html">UGC NET / SLET Paper-1</a></li>
+            <li><a href="computer-courses.html">Computer Diplomas (PGDCA/DCA)</a></li>
           </ul>
         </div>
 
@@ -781,7 +997,8 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Scholar Academy of Learning. All Rights Reserved. Dibrugarh & Tezpur, Assam.</p>
+        <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.5; margin-bottom: 0.8rem; text-align: center;">Scholar Academy of Learning is a premier private coaching &amp; competitive examination preparation institute. We provide classroom coaching, study materials, and mock test guidance. We are an independent educational body and are not affiliated with, endorsed by, or connected to APSC, SLRC, SSC, IBPS, or any government agency. Official notifications should be verified on respective recruitment portals.</p>
+        <p>© 2026 Scholar Academy of Learning. All Rights Reserved. Dibrugarh &amp; Tezpur, Assam.</p>
       </div>
     </div>
   </footer>

@@ -223,14 +223,228 @@
             <span class="nav-item-text">Home</span>
             <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
           </a>
-          <a href="courses.html" class="nav-link">
-            <span class="nav-item-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-            <span class="nav-item-text">Courses</span>
-            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
-          </a>
+
+          <!-- Courses Dropdown with Sub-Categories Mega Menu -->
+          <div class="nav-item-dropdown" id="coursesDropdown">
+            <div class="nav-link-dropdown-row">
+              <a href="courses.html" class="nav-link nav-link-courses">
+                <span class="nav-item-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <span class="nav-item-text">Courses</span>
+                <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+                <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+              </a>
+              <button type="button" class="drawer-caret-btn" onclick="toggleCoursesAccordion(event)" aria-label="Toggle courses list">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <!-- Desktop Mega Dropdown Menu -->
+            <div class="courses-mega-menu">
+              <div class="mega-menu-header">
+                <div class="mega-header-title">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Target Examination Programs</span>
+                </div>
+                <a href="courses.html" class="mega-header-link">View All Courses &rarr;</a>
+              </div>
+
+              <div class="mega-menu-grid">
+                <!-- APSC -->
+                <a href="apsc-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-apsc"><i class="fa-solid fa-award"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>APSC CCE / ACS</strong>
+                      <span class="mega-tag tag-top">Top Rated</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Prelims</span><span class="dot">&bull;</span><span>Mains</span><span class="dot">&bull;</span><span>Assam GS</span><span class="dot">&bull;</span><span>Test Series</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- ADRE -->
+                <a href="adre-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-adre"><i class="fa-solid fa-users"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>ADRE 2.0 / 3.0</strong>
+                      <span class="mega-tag tag-hot">High Vacancy</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Grade III (Graduate &amp; HS)</span><span class="dot">&bull;</span><span>Grade IV</span><span class="dot">&bull;</span><span>SLRC Syllabus</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- SSC -->
+                <a href="ssc-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-ssc"><i class="fa-solid fa-landmark"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>SSC Coaching</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>CGL</span><span class="dot">&bull;</span><span>CHSL</span><span class="dot">&bull;</span><span>MTS</span><span class="dot">&bull;</span><span>GD Constable</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- RRB Railways -->
+                <a href="rrb-railways-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-rrb"><i class="fa-solid fa-train"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Railways (RRB)</strong>
+                      <span class="mega-tag tag-new">New Batches</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>RRB NTPC</span><span class="dot">&bull;</span><span>Group D</span><span class="dot">&bull;</span><span>ALP &amp; Technician</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Banking -->
+                <a href="banking-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-banking"><i class="fa-solid fa-building-columns"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Banking &amp; Insurance</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>IBPS PO / Clerk</span><span class="dot">&bull;</span><span>SBI PO / Clerk</span><span class="dot">&bull;</span><span>RBI Assistant</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Assam TET -->
+                <a href="tet-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-tet"><i class="fa-solid fa-chalkboard-user"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Assam TET</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>LP &amp; UP TET</span><span class="dot">&bull;</span><span>High School TET</span><span class="dot">&bull;</span><span>Pedagogy</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- UGC NET -->
+                <a href="ugc-net-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-net"><i class="fa-solid fa-book-open-reader"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>UGC NET / SLET</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Paper 1 General Aptitude</span><span class="dot">&bull;</span><span>Teaching &amp; Research</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Computer Diplomas -->
+                <a href="computer-courses.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-computer"><i class="fa-solid fa-computer"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Computer Diplomas</strong>
+                      <span class="mega-tag tag-cert">Govt. Valid</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>PGDCA (1 Year)</span><span class="dot">&bull;</span><span>DCA (6 Months)</span><span class="dot">&bull;</span><span>ADCA</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="mega-menu-footer">
+                <div class="mega-footer-info">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Classroom Batches at <strong>Dibrugarh</strong> &amp; <strong>Tezpur</strong> Campuses</span>
+                </div>
+                <a href="tel:+918638757905" class="mega-footer-phone">
+                  <i class="fa-solid fa-phone"></i> Admissions: 8638757905
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Submenu Accordion -->
+            <div class="mobile-courses-accordion" id="mobileCoursesAccordion">
+              <a href="apsc-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-award"></i>
+                <div class="sub-text-col">
+                  <strong>APSC CCE / ACS</strong>
+                  <span>Prelims, Mains, Assam GS</span>
+                </div>
+              </a>
+              <a href="adre-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-users"></i>
+                <div class="sub-text-col">
+                  <strong>ADRE 2.0 / 3.0</strong>
+                  <span>Grade III &amp; Grade IV</span>
+                </div>
+              </a>
+              <a href="ssc-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-landmark"></i>
+                <div class="sub-text-col">
+                  <strong>SSC (CGL, CHSL, MTS)</strong>
+                  <span>Tier I &amp; Tier II</span>
+                </div>
+              </a>
+              <a href="rrb-railways-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-train"></i>
+                <div class="sub-text-col">
+                  <strong>Railways (RRB NTPC &amp; Group D)</strong>
+                  <span>NTPC, Group D, ALP</span>
+                </div>
+              </a>
+              <a href="banking-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-building-columns"></i>
+                <div class="sub-text-col">
+                  <strong>Banking (IBPS &amp; SBI)</strong>
+                  <span>PO, Clerk &amp; RBI Assistant</span>
+                </div>
+              </a>
+              <a href="tet-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <div class="sub-text-col">
+                  <strong>Assam TET</strong>
+                  <span>LP / UP &amp; High School TET</span>
+                </div>
+              </a>
+              <a href="ugc-net-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <div class="sub-text-col">
+                  <strong>UGC NET / SLET</strong>
+                  <span>Paper 1 General Aptitude</span>
+                </div>
+              </a>
+              <a href="computer-courses.html" class="mobile-sub-link">
+                <i class="fa-solid fa-computer"></i>
+                <div class="sub-text-col">
+                  <strong>Computer Diplomas</strong>
+                  <span>PGDCA, DCA (Govt. Valid)</span>
+                </div>
+              </a>
+              <a href="courses.html" class="mobile-sub-link view-all-mobile">
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="sub-text-col">
+                  <strong>View All Courses &amp; Fees</strong>
+                  <span>Full Course Catalog &rarr;</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
           <a href="about.html" class="nav-link">
             <span class="nav-item-icon"><i class="fa-solid fa-building-columns"></i></span>
             <span class="nav-item-text">About Us</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="students-zone.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-book-open"></i></span>
+            <span class="nav-item-text">Student Zone</span>
             <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
           </a>
           <a href="https://salonlinetest.in/" target="_blank" rel="noopener" class="nav-link">
@@ -274,7 +488,7 @@
             </a>
           </div>
           <div class="drawer-locations-tag">
-            <i class="fa-solid fa-location-dot"></i> Dibrugarh & Tezpur Campuses
+            <i class="fa-solid fa-location-dot"></i> Dibrugarh &amp; Tezpur Campuses
           </div>
         </div>
       </nav>
@@ -560,72 +774,93 @@
     </div>
   </section>
 
-  <!-- 4. "OUR COURSES" HORIZONTAL PASTEL CARDS (Exact Match) -->
+  <!-- 4. "OUR COURSES" EXAMINATION PATHWAYS (Direct to Exam Pages) -->
   <section class="courses-summary-section" id="courses">
     <div class="container">
       
       <div class="courses-header-row">
-        <h2 class="courses-main-title">Our Courses</h2>
+        <div>
+          <span class="section-tag" style="margin-bottom: 0.4rem; display: inline-block;">Targeted Coaching</span>
+          <h2 class="courses-main-title" style="margin: 0;">Our Coaching Programs</h2>
+        </div>
         <a href="courses.html" class="btn-pill-link">
-          View All Courses &rarr;
+          Explore All 8+ Programs &rarr;
         </a>
       </div>
 
-      <!-- 6 Pastel Cards Grid -->
+      <!-- 8 Pastel Cards Grid Directly Linking to Dedicated Exam Pages -->
       <div class="courses-pastel-grid">
         
         <!-- 1. APSC -->
-        <a href="#all-batches" class="pastel-course-card card-apsc" onclick="filterBatches('apsc')">
+        <a href="apsc-coaching.html" class="pastel-course-card card-apsc" aria-label="APSC CCE Coaching">
           <div class="pastel-icon-circle">
-            <i class="fa-solid fa-landmark-dome"></i>
+            <i class="fa-solid fa-award"></i>
           </div>
-          <h4>APSC</h4>
-          <p>Assam Public Service Commission</p>
+          <h4>APSC CCE</h4>
+          <p>Civil Services Foundation</p>
         </a>
 
         <!-- 2. ADRE -->
-        <a href="#all-batches" class="pastel-course-card card-adre" onclick="filterBatches('adre')">
+        <a href="adre-coaching.html" class="pastel-course-card card-adre" aria-label="ADRE Coaching">
           <div class="pastel-icon-circle">
-            <i class="fa-solid fa-file-lines"></i>
+            <i class="fa-solid fa-users"></i>
           </div>
-          <h4>ADRE</h4>
-          <p>Assam Direct Recruitment</p>
+          <h4>ADRE 2.0</h4>
+          <p>Grade III &amp; Grade IV</p>
         </a>
 
         <!-- 3. SSC -->
-        <a href="#all-batches" class="pastel-course-card card-ssc" onclick="filterBatches('ssc')">
+        <a href="ssc-coaching.html" class="pastel-course-card card-ssc" aria-label="SSC Coaching">
           <div class="pastel-icon-circle" style="background: #ffffff; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; align-items: center; justify-content: center;">
             <img src="assets/ssc logo.jpg" alt="SSC Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
           </div>
-          <h4>SSC</h4>
-          <p>Staff Selection Commission</p>
+          <h4>SSC Exams</h4>
+          <p>CGL, CHSL, MTS &amp; GD</p>
         </a>
 
         <!-- 4. Banking -->
-        <a href="#all-batches" class="pastel-course-card card-banking" onclick="filterBatches('banking')">
+        <a href="banking-coaching.html" class="pastel-course-card card-banking" aria-label="Banking Coaching">
           <div class="pastel-icon-circle">
             <i class="fa-solid fa-building-columns"></i>
           </div>
           <h4>Banking</h4>
-          <p>IBPS | SBI | RRB & Other Exams</p>
+          <p>IBPS, SBI &amp; Insurance</p>
         </a>
 
         <!-- 5. TET -->
-        <a href="#all-batches" class="pastel-course-card card-tet" onclick="filterBatches('tet')">
+        <a href="tet-coaching.html" class="pastel-course-card card-tet" aria-label="Assam TET Coaching">
           <div class="pastel-icon-circle">
-            <i class="fa-solid fa-graduation-cap"></i>
+            <i class="fa-solid fa-chalkboard-user"></i>
           </div>
-          <h4>TET</h4>
-          <p>Teacher Eligibility Test</p>
+          <h4>Assam TET</h4>
+          <p>LP / UP &amp; High School</p>
         </a>
 
-        <!-- 6. Other Courses -->
-        <a href="#all-batches" class="pastel-course-card card-school" onclick="filterBatches('other')">
+        <!-- 6. Railways -->
+        <a href="rrb-railways-coaching.html" class="pastel-course-card card-school" aria-label="Railways Coaching">
           <div class="pastel-icon-circle">
-            <i class="fa-solid fa-shapes"></i>
+            <i class="fa-solid fa-train"></i>
           </div>
-          <h4>Other Courses</h4>
-          <p>Railways, Defence, CTET & State Exams</p>
+          <h4>Railways (RRB)</h4>
+          <p>NTPC, Group D &amp; ALP</p>
+        </a>
+
+        <!-- 7. UGC NET -->
+        <a href="ugc-net-coaching.html" class="pastel-course-card card-net" aria-label="UGC NET Coaching">
+          <div class="pastel-icon-circle">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <h4>UGC NET</h4>
+          <p>Paper 1 General Aptitude</p>
+        </a>
+
+        <!-- 8. Computer Diplomas -->
+        <a href="computer-courses.html" class="pastel-course-card card-computer" aria-label="Computer Courses">
+          <div class="pastel-icon-circle">
+            <i class="fa-solid fa-computer"></i>
+          </div>
+          <h4>Computer Diplomas</h4>
+          <p>PGDCA &amp; DCA (Govt. Valid)</p>
         </a>
 
       </div>
@@ -633,31 +868,171 @@
     </div>
   </section>
 
-  <!-- 4.1 DETAILED POPULAR BATCHES & ENROLLMENT SECTION -->
-  <section class="section-py" id="all-batches" style="background: #ffffff;">
+  <!-- 4.1 FEATURED PROGRAMS DIRECTORY (Clean Hub Cards on Home Page) -->
+  <section class="section-py" id="featured-programs" style="background: #ffffff;">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-tag">Featured Flagship Batches</span>
-        <h2 class="section-heading-lg">Popular Classroom & Online Batches</h2>
-        <p style="color: #64748b; font-size: 1rem;">
-          Specialized preparation with structured mock tests, bilingual study material and personal mentorship.
+        <span class="section-tag">Flagship Pathways</span>
+        <h2 class="section-heading-lg">Specialized Coaching for Government Examinations</h2>
+        <p style="color: #64748b; font-size: 1rem; max-width: 680px; margin: 0 auto;">
+          Expert classroom mentorship, comprehensive printed study materials, and rigorous mock test series available at our Dibrugarh and Tezpur campuses.
         </p>
       </div>
 
-      <div class="batch-cards-grid" id="batchCardsGrid">
-        <!-- Injected via JavaScript -->
+      <div class="programs-hub-grid" style="margin-top: 2rem;">
+        
+        <!-- APSC Highlight Card -->
+        <div class="program-hub-card">
+          <div class="program-hub-header">
+            <div class="program-hub-icon mega-icon-apsc">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="program-hub-title-wrap">
+              <div class="program-hub-badges">
+                <span class="program-hub-badge badge-blue">Premier Program</span>
+                <span class="program-hub-badge badge-red">Top Rated</span>
+              </div>
+              <h3 class="program-hub-title">APSC Foundation Course</h3>
+            </div>
+          </div>
+          <div class="program-hub-body">
+            <p class="program-hub-desc">
+              10-12 month foundation batch covering Prelims GS &amp; CSAT, Mains 5 Papers, Assam GS specialized modules, daily answer evaluation and mock personality tests.
+            </p>
+            <div class="program-hub-tags">
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> Prelims GS + CSAT</span>
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> Mains Answer Writing</span>
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> Assam GS Special</span>
+            </div>
+            <div class="program-hub-actions">
+              <a href="apsc-coaching.html" class="btn-program-primary">
+                <span>View APSC Details &amp; Syllabus</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <button class="btn-program-secondary" onclick="openEnquiryModal('APSC Home Hub Enquiry')">
+                Enquire
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADRE Highlight Card -->
+        <div class="program-hub-card">
+          <div class="program-hub-header">
+            <div class="program-hub-icon mega-icon-adre">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="program-hub-title-wrap">
+              <div class="program-hub-badges">
+                <span class="program-hub-badge badge-green">High Vacancy</span>
+                <span class="program-hub-badge badge-teal">State Govt</span>
+              </div>
+              <h3 class="program-hub-title">ADRE 3.0 Coaching</h3>
+            </div>
+          </div>
+          <div class="program-hub-body">
+            <p class="program-hub-desc">
+              Structured preparation for Grade III (Graduate &amp; HS Level) and Grade IV examinations under SLRC Assam with bilingual study material and weekly mock tests.
+            </p>
+            <div class="program-hub-tags">
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> Grade III Graduate Level</span>
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> Grade III HSSLC Level</span>
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> Grade IV Syllabus</span>
+            </div>
+            <div class="program-hub-actions">
+              <a href="adre-coaching.html" class="btn-program-primary">
+                <span>View ADRE Details &amp; Syllabus</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <button class="btn-program-secondary" onclick="openEnquiryModal('ADRE Home Hub Enquiry')">
+                Enquire
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SSC Highlight Card -->
+        <div class="program-hub-card">
+          <div class="program-hub-header">
+            <div class="program-hub-icon mega-icon-ssc">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <div class="program-hub-title-wrap">
+              <div class="program-hub-badges">
+                <span class="program-hub-badge badge-purple">Central Govt</span>
+                <span class="program-hub-badge badge-blue">CGL &amp; CHSL</span>
+              </div>
+              <h3 class="program-hub-title">SSC Coaching (CGL, CHSL, MTS)</h3>
+            </div>
+          </div>
+          <div class="program-hub-body">
+            <p class="program-hub-desc">
+              Master quantitative aptitude, analytical reasoning, English comprehension, and general awareness for all Staff Selection Commission Tier-I &amp; Tier-II exams.
+            </p>
+            <div class="program-hub-tags">
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> SSC CGL (Tier I &amp; II)</span>
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> SSC CHSL (10+2)</span>
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> SSC MTS &amp; GD</span>
+            </div>
+            <div class="program-hub-actions">
+              <a href="ssc-coaching.html" class="btn-program-primary">
+                <span>View SSC Details &amp; Syllabus</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <button class="btn-program-secondary" onclick="openEnquiryModal('SSC Home Hub Enquiry')">
+                Enquire
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Railways RRB Highlight Card -->
+        <div class="program-hub-card">
+          <div class="program-hub-header">
+            <div class="program-hub-icon mega-icon-rrb">
+              <i class="fa-solid fa-train"></i>
+            </div>
+            <div class="program-hub-title-wrap">
+              <div class="program-hub-badges">
+                <span class="program-hub-badge badge-red">New Batches</span>
+                <span class="program-hub-badge badge-amber">CBT Computer Lab</span>
+              </div>
+              <h3 class="program-hub-title">Railways (RRB NTPC, Group D, ALP)</h3>
+            </div>
+          </div>
+          <div class="program-hub-body">
+            <p class="program-hub-desc">
+              Dedicated classroom and computer lab coaching for RRB NTPC, Group D, Assistant Loco Pilot (ALP), and Technical cadres with simulated CBT testing.
+            </p>
+            <div class="program-hub-tags">
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> RRB NTPC (Grad &amp; 12th)</span>
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> RRB Group D Exam</span>
+              <span class="program-hub-tag"><i class="fa-solid fa-check"></i> ALP &amp; Technician</span>
+            </div>
+            <div class="program-hub-actions">
+              <a href="rrb-railways-coaching.html" class="btn-program-primary">
+                <span>View Railways Details &amp; Syllabus</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <button class="btn-program-secondary" onclick="openEnquiryModal('RRB Home Hub Enquiry')">
+                Enquire
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- View All Courses Action Box -->
-      <div style="text-align: center; margin-top: 3rem; padding-top: 0.5rem;">
+      <!-- Action Banner to Full Hub -->
+      <div style="text-align: center; margin-top: 2.5rem; padding-top: 1rem;">
         <a href="courses.html" class="btn btn-blue" style="padding: 0.9rem 2.5rem; font-size: 1.05rem; font-weight: 700; border-radius: var(--radius-full); box-shadow: 0 8px 22px rgba(13, 110, 253, 0.25); display: inline-flex; align-items: center; gap: 0.65rem;">
-          <span>View All 20+ Courses & Syllabi</span>
-          <i class="fa-solid fa-arrow-right"></i>
+          <span>Explore All 8+ Examination Programs &rarr;</span>
         </a>
         <p style="color: #64748b; font-size: 0.88rem; margin-top: 0.75rem;">
-          Explore all specialized programs for APSC, ADRE, SSC, Banking, Railways, TET & Computer Diplomas.
+          Includes Banking (IBPS/SBI), Assam TET, UGC NET / SLET &amp; Computer Diplomas (PGDCA/DCA).
         </p>
       </div>
+
     </div>
   </section>
 
@@ -1029,12 +1404,14 @@
         <div class="footer-col">
           <h4>Our Courses</h4>
           <ul class="footer-links">
-            <li><a href="courses/apsc">APSC Foundation Course</a></li>
-            <li><a href="courses/adre">ADRE 2.0 (Grade III & IV)</a></li>
-            <li><a href="courses/ssc">SSC CGL / CHSL / MTS</a></li>
-            <li><a href="courses/banking">Banking (IBPS / SBI PO)</a></li>
-            <li><a href="courses/tet">Assam TET Preparation</a></li>
-            <li><a href="courses/other">Other Courses (Railways/Defence)</a></li>
+            <li><a href="apsc-coaching.html">APSC Foundation Course</a></li>
+            <li><a href="adre-coaching.html">ADRE 2.0 (Grade III & IV)</a></li>
+            <li><a href="ssc-coaching.html">SSC CGL / CHSL / MTS</a></li>
+            <li><a href="banking-coaching.html">Banking (IBPS / SBI PO)</a></li>
+            <li><a href="rrb-railways-coaching.html">Railways & Defence Exams</a></li>
+            <li><a href="tet-coaching.html">Assam TET Preparation</a></li>
+            <li><a href="ugc-net-coaching.html">UGC NET / SLET Paper-1</a></li>
+            <li><a href="computer-courses.html">Computer Diplomas (PGDCA/DCA)</a></li>
           </ul>
         </div>
 
@@ -1098,7 +1475,8 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Scholar Academy of Learning. All Rights Reserved. Dibrugarh & Tezpur, Assam.</p>
+        <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.5; margin-bottom: 0.8rem; text-align: center;">Scholar Academy of Learning is a premier private coaching &amp; competitive examination preparation institute. We provide classroom coaching, study materials, and mock test guidance. We are an independent educational body and are not affiliated with, endorsed by, or connected to APSC, SLRC, SSC, IBPS, or any government agency. Official notifications should be verified on respective recruitment portals.</p>
+        <p>© 2026 Scholar Academy of Learning. All Rights Reserved. Dibrugarh &amp; Tezpur, Assam.</p>
       </div>
     </div>
   </footer>
@@ -1209,435 +1587,6 @@
        JAVASCRIPT LOGIC
        ========================================================================== -->
   <script>
-    const BATCHES_DATA = [
-      {
-        id: "apsc",
-        isMain: true,
-        category: "APSC",
-        title: "APSC Foundation Course",
-        duration: "12 Months",
-        eligibility: "Graduation",
-        mode: "Offline",
-        timing: "Morning & Evening Batches",
-        price: "₹48,500",
-        original: "₹65,000",
-        discount: "25% OFF",
-        features: [
-          "Complete coverage of GS Papers 1 to 5 + Essay",
-          "Special focus on Assam History, Art & Culture (GS-V)",
-          "Weekly Mains Answer Writing & evaluation by officers",
-          "40 Prelims + 20 Mains standard full-length mock tests"
-        ]
-      },
-      {
-        id: "adre",
-        isMain: true,
-        category: "ADRE",
-        title: "ADRE EXAM (Grade III & IV)",
-        duration: "5 Months",
-        eligibility: "HS / Graduate",
-        mode: "Offline Mode (Classroom)",
-        timing: "Regular & Weekend Batches",
-        price: "₹15,500",
-        original: "₹22,000",
-        discount: "30% OFF",
-        features: [
-          "Full syllabus coverage as per Assam SLRC guidelines",
-          "General Knowledge, Assam GK, Math & Reasoning",
-          "50 Full-length mock tests in exact exam format",
-          "Bilingual printed study materials & daily current affairs"
-        ]
-      },
-      {
-        id: "ssc",
-        isMain: true,
-        category: "SSC",
-        title: "Combined Graduate Level (CGL EXAM)",
-        duration: "5 Months",
-        eligibility: "Graduation",
-        mode: "Offline + CBT Lab",
-        timing: "Daily 3 Hours Classes",
-        price: "₹15,500",
-        original: "₹22,000",
-        discount: "30% OFF",
-        features: [
-          "Complete Tier-I & Tier-II syllabus (Quant, Reasoning, English, GA)",
-          "Vedic Speed Math calculations & reasoning tricks",
-          "100+ Computer-based Mock Tests in actual TCS interface",
-          "Tier-II Computer Knowledge & DEST typing guidance"
-        ]
-      },
-      {
-        id: "ssc",
-        category: "SSC",
-        title: "Combined Higher Secondary Level (CHSL EXAM)",
-        duration: "5 Months",
-        eligibility: "10+2",
-        mode: "Offline + CBT Lab",
-        timing: "Daily 3 Hours Classes",
-        price: "₹15,500",
-        original: "₹22,000",
-        discount: "30% OFF",
-        features: [
-          "Targeted coaching for LDC, JSA & DEO posts",
-          "Speed maths shortcuts & grammar error-detection drills",
-          "Topic-wise practice sets & regular CBT simulated tests",
-          "Data Entry Operator (DEO) & LDC typing exam preparation"
-        ]
-      },
-      {
-        id: "ssc",
-        category: "SSC",
-        title: "SSC GD (General Duty)",
-        duration: "5 Months",
-        eligibility: "10+2",
-        mode: "Classroom + Online Hybrid",
-        timing: "Daily 3 Hours Classes",
-        price: "₹15,500",
-        original: "₹22,000",
-        discount: "30% OFF",
-        features: [
-          "Complete syllabus for CAPFs, SSF, Rifleman (GD) in Assam Rifles",
-          "Bilingual classroom sessions & simplified study modules",
-          "Daily practice sheets, speed drills & computer mock test series",
-          "Physical Efficiency Test (PET) & Medical exam guidance"
-        ]
-      },
-      {
-        id: "banking",
-        isMain: true,
-        category: "Banking",
-        title: "IBPS – PO Exam",
-        duration: "6 Months",
-        eligibility: "Graduate",
-        mode: "Classroom + CBT Lab",
-        timing: "Morning / Evening",
-        price: "₹16,000",
-        original: "₹24,000",
-        discount: "33% OFF",
-        features: [
-          "Complete Prelims & Mains coverage (Quant, Reasoning, English, GA, Computer)",
-          "High-level Data Interpretation & advanced analytical puzzles",
-          "Descriptive English essay writing & personalized review",
-          "Mock interview training by retired Chief Managers"
-        ]
-      },
-      {
-        id: "banking",
-        category: "Banking",
-        title: "IBPS – RRB (Officer & Assistant)",
-        duration: "6 Months",
-        eligibility: "Graduate",
-        mode: "Classroom + CBT Lab",
-        timing: "Morning / Evening",
-        price: "₹16,000",
-        original: "₹24,000",
-        discount: "33% OFF",
-        features: [
-          "Targeted coaching for AGVB & Regional Rural Banks in Assam",
-          "High-speed 80-question 45-minute Prelims timer drills",
-          "Rural banking schemes, NABARD priorities & financial awareness",
-          "50+ Full-length CBT mock tests in exact IBPS interface"
-        ]
-      },
-      {
-        id: "banking",
-        category: "Banking",
-        title: "IBPS – Clerk Exam",
-        duration: "6 Months",
-        eligibility: "Graduate",
-        mode: "Classroom + CBT Lab",
-        timing: "Morning / Evening",
-        price: "₹16,000",
-        original: "₹24,000",
-        discount: "33% OFF",
-        features: [
-          "Speed & accuracy mastery for 100-mark 60-minute Prelims cutoff",
-          "Vedic Maths calculation shortcuts & English grammar drills",
-          "Monthly financial awareness digest & daily banking quiz series",
-          "40+ Sectional & full-length CBT speed tests"
-        ]
-      },
-      {
-        id: "banking",
-        category: "Banking",
-        title: "LIC AAO (Assistant Administrative Officer)",
-        duration: "6 Months",
-        eligibility: "Graduate",
-        mode: "Classroom + CBT Lab",
-        timing: "Morning / Evening",
-        price: "₹16,000",
-        original: "₹24,000",
-        discount: "33% OFF",
-        features: [
-          "Complete Prelims, Mains & Insurance/Financial market awareness",
-          "Data Analysis & Interpretation high-scoring strategies",
-          "Insurance history, IRDAI regulations, life & general insurance principles",
-          "Interview preparation & personality grooming workshops"
-        ]
-      },
-      {
-        id: "banking",
-        category: "Banking",
-        title: "SBI – Clerk (Junior Associate)",
-        duration: "6 Months",
-        eligibility: "Graduate",
-        mode: "Classroom + CBT Lab",
-        timing: "Morning / Evening",
-        price: "₹16,000",
-        original: "₹24,000",
-        discount: "33% OFF",
-        features: [
-          "Targeted preparation for SBI Junior Associates Prelims & Mains",
-          "High-speed arithmetic shortcuts & tricky puzzle solving techniques",
-          "Special SBI current affairs, banking economy & general awareness module",
-          "Computer proficiency & local language test (LPT) guidance"
-        ]
-      },
-      {
-        id: "tet",
-        category: "TET",
-        title: "Assam TET (LP & UP) Complete Master Program",
-        duration: "3.5 Months",
-        eligibility: "Graduation / 10+2 + D.El.Ed / B.Ed",
-        mode: "Offline & Live Online",
-        timing: "Flexible Batches",
-        price: "₹9,999",
-        original: "₹15,000",
-        discount: "33% OFF",
-        features: [
-          "Child Development & Pedagogy (CDP) mastery",
-          "Language I & II (Assamese / English / Bodo)",
-          "Mathematics & Environmental Studies (EVS)",
-          "30 Full-length mock tests with answer discussions"
-        ]
-      },
-      {
-        id: "other",
-        category: "Railways & RRB",
-        title: "RRB NTPC Exam",
-        duration: "5 Months",
-        eligibility: "Class 10+2 Or Graduation",
-        mode: "Classroom + CBT Lab",
-        timing: "Morning & Evening",
-        price: "₹15,500",
-        original: "₹22,000",
-        discount: "30% OFF",
-        features: [
-          "Complete CBT-1 & CBT-2 syllabus (Math, General Intelligence, GA)",
-          "Fast-track arithmetic calculations & reasoning shortcuts",
-          "50+ Computer-based Mock Tests in actual RRB exam format",
-          "Typing Skill Test (TST) & Document Verification guidance"
-        ]
-      },
-      {
-        id: "other",
-        category: "Railways & RRB",
-        title: "RRB Group D Exam",
-        duration: "6 Months",
-        eligibility: "Graduation",
-        mode: "Classroom + CBT Lab",
-        timing: "Morning & Evening",
-        price: "₹15,500",
-        original: "₹22,000",
-        discount: "30% OFF",
-        features: [
-          "In-depth General Science coverage (Physics, Chemistry, Life Sciences 10th)",
-          "Mathematics speed drills & conceptual problem-solving workshops",
-          "Weekly full-length CBT tests with detailed solution analysis",
-          "Physical Efficiency Test (PET) counseling & medical test guidance"
-        ]
-      },
-      {
-        id: "other",
-        category: "Spoken English & Communication",
-        title: "Spoken English & Personality Development",
-        duration: "3 Months",
-        eligibility: "Open to All (Students, Job Seekers & Professionals)",
-        mode: "Classroom & Interactive Lab",
-        timing: "Morning & Evening Batches",
-        price: "₹10,000",
-        original: "₹15,000",
-        discount: "33% OFF",
-        features: [
-          "Fluency building, daily group discussions & active speaking drills",
-          "Grammar foundations, vocabulary expansion & accent neutralization",
-          "Public speaking, stage confidence & interview facing techniques",
-          "Professional email writing, body language & soft skills training"
-        ]
-      },
-      {
-        id: "other",
-        category: "Railways & RRB",
-        title: "RRB JE (Junior Engineer)",
-        duration: "6 Months",
-        eligibility: "Diploma / B.Tech (Civil/Mech/Elec/EC/CS)",
-        mode: "Classroom + CBT Lab",
-        timing: "Morning & Evening",
-        price: "₹15,500",
-        original: "₹22,000",
-        discount: "30% OFF",
-        features: [
-          "Full CBT-1 Non-Technical & CBT-2 Technical Branch syllabus",
-          "Core Engineering concepts (Civil, Mechanical, Electrical, Electronics & Allied)",
-          "Basics of Computers, Environment & Pollution Control, Physics & Chemistry",
-          "Extensive numerical problem-solving sessions & formula cheat sheets"
-        ]
-      },
-      {
-        id: "computer",
-        category: "Computer & Diploma",
-        title: "Certificate in Office (MS Office)",
-        duration: "3 Months",
-        eligibility: "10th / 10+2 / Open for All",
-        mode: "Hands-on Practical Lab",
-        timing: "Morning & Evening",
-        price: "₹4,500",
-        original: "₹7,000",
-        discount: "35% OFF",
-        features: [
-          "Computer Fundamentals, OS Concepts & MS-DOS",
-          "Windows XP / 10 / 11 (Notepad, Wordpad, Paint Brush)",
-          "MS Office Suite: MS Word, MS Excel & MS PowerPoint",
-          "Official documentation formatting & typing speed tests"
-        ]
-      },
-      {
-        id: "computer",
-        category: "Computer & Diploma",
-        title: "Certificate in Tally.ERP 9 with GST",
-        duration: "3 Months",
-        eligibility: "10+2 / Commerce / Any Stream",
-        mode: "Hands-on Practical Lab",
-        timing: "Morning & Evening",
-        price: "₹5,500",
-        original: "₹8,500",
-        discount: "35% OFF",
-        features: [
-          "Computer Fundamentals, MS-DOS & Windows Operating Environment",
-          "Windows Accessories (Notepad, Wordpad, Paint Brush)",
-          "Account Only (Ledger Creation, Voucher Entry, Balance Sheet)",
-          "Account with Inventory (Stock Groups, Items, Invoicing & GST Returns)"
-        ]
-      },
-      {
-        id: "computer",
-        category: "Computer & Diploma",
-        title: "PGDCA (Post Graduate Diploma in Computer Applications)",
-        duration: "12 Months (2 Semesters)",
-        eligibility: "Graduation (Any Stream)",
-        mode: "Classroom + Advanced Lab + Project",
-        timing: "Daily 2 Hours Lab & Theory",
-        price: "₹14,500",
-        original: "₹22,000",
-        discount: "34% OFF",
-        features: [
-          "1st Sem: Fundamentals, MS-DOS, Windows (Notepad, Wordpad, Paint), MS Office (Word, Excel, Access, Outlook, PPT), DTP, Visual Basic",
-          "2nd Sem: 'C' Programming, Visual Basic, C++, Flash Animation & Major Project",
-          "Comprehensive software development, database management & office automation",
-          "Government job recognized post graduate computer diploma certificate"
-        ]
-      },
-      {
-        id: "computer",
-        category: "Computer & Diploma",
-        title: "DCA (Diploma in Computer Applications)",
-        duration: "6 Months & 1 Year",
-        eligibility: "10+2 / HSLC Pass",
-        mode: "Hands-on Practical Lab",
-        timing: "Morning & Evening",
-        price: "₹8,500",
-        original: "₹13,000",
-        discount: "35% OFF",
-        features: [
-          "Computer Fundamentals, MS-DOS & Windows (Notepad, Wordpad, Paint Brush)",
-          "Account Only & Account with Inventory management",
-          "MS Office Package (Word, Excel, PowerPoint, Access)",
-          "Internet applications, digital communication & office utilities"
-        ]
-      },
-      {
-        id: "computer",
-        category: "Computer & Diploma",
-        title: "Certificate in DTP (Desktop Publishing)",
-        duration: "3 Months",
-        eligibility: "10th / 10+2 / Open for All",
-        mode: "Design Lab + Live Project",
-        timing: "Morning & Evening",
-        price: "₹5,000",
-        original: "₹8,000",
-        discount: "37% OFF",
-        features: [
-          "Computer Fundamentals & Paint Brush design essentials",
-          "PageMaker: Publication formatting, books, magazines & newspapers",
-          "CorelDraw: Vector logos, banners, flex designs & multi-color layouts",
-          "Adobe Photoshop: Image editing, layer blending, retouching & color effects"
-        ]
-      }
-    ];
-
-    document.addEventListener('DOMContentLoaded', () => {
-      renderBatches('all');
-    });
-
-    function renderBatches(category) {
-      const container = document.getElementById('batchCardsGrid');
-      const filtered = category === 'all' 
-        ? BATCHES_DATA.filter(b => b.isMain).slice(0, 4) 
-        : BATCHES_DATA.filter(b => b.id === category);
-
-      container.innerHTML = filtered.map(b => `
-        <div class="batch-card">
-          <div class="batch-card-content">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
-              <span class="batch-badge">${b.category}</span>
-              ${b.id === 'ssc' ? `<img src="assets/ssc logo.jpg" alt="SSC" style="width: 28px; height: 28px; border-radius: 50%; object-fit: contain; border: 1px solid #cbd5e1; background: #ffffff; padding: 2px;">` : ''}
-            </div>
-            <h3 class="batch-title">${b.title}</h3>
-
-            <div class="batch-meta-grid">
-              <div class="batch-meta-item">
-                <i class="fa-regular fa-clock"></i>
-                <span><strong>Duration:</strong> ${b.duration}</span>
-              </div>
-              <div class="batch-meta-item">
-                <i class="fa-solid fa-user-graduate"></i>
-                <span><strong>Eligibility:</strong> ${b.eligibility}</span>
-              </div>
-              <div class="batch-meta-item">
-                <i class="fa-solid fa-chalkboard-user"></i>
-                <span>${b.mode}</span>
-              </div>
-              <div class="batch-meta-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Dibrugarh & Tezpur</span>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top: auto;">
-            <div class="batch-price-row">
-              <span class="batch-price">${b.price}</span>
-              <span class="batch-original">${b.original}</span>
-              <span class="batch-discount">${b.discount}</span>
-            </div>
-            <div class="batch-actions">
-              <button class="btn btn-outline-video btn-sm" onclick="openEnquiryModal('Syllabus Inquiry: ${b.title}')">
-                Get Syllabus
-              </button>
-              <button class="btn btn-blue btn-sm" onclick="openEnquiryModal('${b.title}')">
-                Enquire Now
-              </button>
-            </div>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function filterBatches(category) {
-      renderBatches(category);
-    }
-
     /* Modal Controls */
     function openEnquiryModal(courseName = '') {
       const targetInput = document.getElementById('modalCourseTarget');

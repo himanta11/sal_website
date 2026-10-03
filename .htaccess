@@ -7,13 +7,23 @@
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # 2. Rewrite clean /courses to courses.html
+  # 2. Dedicated Category Page clean routing (/courses/apsc -> apsc-coaching.html)
+  RewriteRule ^courses/apsc/?$ apsc-coaching.html [L,QSA]
+  RewriteRule ^courses/adre/?$ adre-coaching.html [L,QSA]
+  RewriteRule ^courses/ssc/?$ ssc-coaching.html [L,QSA]
+  RewriteRule ^courses/banking/?$ banking-coaching.html [L,QSA]
+  RewriteRule ^courses/rrb/?$ rrb-railways-coaching.html [L,QSA]
+  RewriteRule ^courses/railways/?$ rrb-railways-coaching.html [L,QSA]
+  RewriteRule ^courses/other/?$ rrb-railways-coaching.html [L,QSA]
+  RewriteRule ^courses/tet/?$ tet-coaching.html [L,QSA]
+  RewriteRule ^courses/ugc-net/?$ ugc-net-coaching.html [L,QSA]
+  RewriteRule ^courses/computer/?$ computer-courses.html [L,QSA]
+
+  # 3. Rewrite clean /courses to courses.html
   RewriteRule ^courses/?$ courses.html [L,QSA]
 
-  # 3. Rewrite /courses/{category} to courses.html?category={category}
+  # 4. Fallback for any other category query
   RewriteRule ^courses/([a-zA-Z0-9_-]+)/?$ courses.html?category=$1 [L,QSA]
-
-  # 4. Rewrite /courses.html/{category} to courses.html?category={category}
   RewriteRule ^courses\.html/([a-zA-Z0-9_-]+)/?$ courses.html?category=$1 [L,QSA]
 
   # 5. Rewrite /blog/{slug} to {slug}.html

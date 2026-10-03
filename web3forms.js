@@ -258,3 +258,37 @@ window.handleContactPageSubmit = handleContactPageSubmit;
 window.handleFranchiseSubmit = handleFranchiseSubmit;
 window.handleFranchiseModalSubmit = handleFranchiseModalSubmit;
 window.handleMentorshipSubmit = handleMentorshipSubmit;
+
+/**
+ * 6. Mobile Navigation Courses Accordion Toggle
+ */
+function toggleCoursesAccordion(e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  const accordion = document.getElementById("mobileCoursesAccordion");
+  const btn = document.querySelector(".drawer-caret-btn");
+  if (accordion) {
+    const isOpen = accordion.classList.toggle("open");
+    if (btn) btn.classList.toggle("open", isOpen);
+  }
+}
+window.toggleCoursesAccordion = toggleCoursesAccordion;
+
+// Auto-close mobile drawer when a mobile sub-link is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".mobile-sub-link").forEach(link => {
+    link.addEventListener("click", () => {
+      const nav = document.getElementById("mainNav");
+      const backdrop = document.getElementById("mobileNavBackdrop");
+      const btn = document.getElementById("mobileMenuBtn");
+      if (nav && nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        if (backdrop) backdrop.classList.remove("active");
+        if (btn) btn.classList.remove("active");
+        document.body.classList.remove("mobile-nav-open");
+      }
+    });
+  });
+});

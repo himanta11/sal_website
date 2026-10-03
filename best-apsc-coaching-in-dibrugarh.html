@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best APSC Coaching in Dibrugarh | Fees, Classes & Study Guide | Scholar Academy</title>
   <meta name="description" content="Looking for the best APSC coaching in Dibrugarh? Learn about APSC fees, classes, study materials, preparation strategy, mock tests and coaching tips.">
@@ -99,7 +98,7 @@
             "name": "How much does APSC coaching cost in Dibrugarh?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "APSC coaching fees vary depending on the institute, course duration, class format (classroom or hybrid), study materials, and mock test packages. At Scholar Academy, transparent pricing and flexible installment options are provided."
+              "text": "APSC coaching fees vary depending on the institute, course duration, class format (classroom or hybrid), study materials, and mock test packages. At Scholar Academy, our 1-Year Integrated Foundation Batch is offered at ₹45,000 with transparent pricing, printed study materials, test series, and flexible installment options."
             }
           },
           {
@@ -486,7 +485,7 @@
         <span class="announcement-badge"><i class="fa-solid fa-graduation-cap"></i> Admissions Open</span>
         <span class="announcement-text">
           <strong>APSC Foundation 2026-2027:</strong> Comprehensive classroom batch admissions open at Dibrugarh & Tezpur!
-          <a href="courses/apsc" class="announcement-link">Explore APSC Course &rarr;</a>
+          <a href="apsc-coaching.html" class="announcement-link">Explore APSC Course &rarr;</a>
         </span>
       </div>
       <button class="announcement-close-btn" onclick="dismissAnnouncement()" title="Dismiss announcement" aria-label="Close announcement">
@@ -503,7 +502,9 @@
       </a>
 
       <!-- Main Navigation Menu / Mobile Drawer -->
+            <!-- Main Navigation Menu / Mobile Off-Canvas Drawer -->
       <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+        <!-- Mobile Drawer Header -->
         <div class="mobile-drawer-header">
           <div class="drawer-brand">
             <img src="assets/logo.svg" alt="Scholar Academy of Learning" class="drawer-logo">
@@ -517,20 +518,235 @@
           </button>
         </div>
 
+        <!-- Navigation Items Container -->
         <div class="mobile-drawer-body">
           <a href="index.html" class="nav-link">
             <span class="nav-item-icon"><i class="fa-solid fa-house"></i></span>
             <span class="nav-item-text">Home</span>
             <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
           </a>
-          <a href="courses" class="nav-link">
-            <span class="nav-item-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-            <span class="nav-item-text">Courses</span>
-            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
-          </a>
+
+          <!-- Courses Dropdown with Sub-Categories Mega Menu -->
+          <div class="nav-item-dropdown" id="coursesDropdown">
+            <div class="nav-link-dropdown-row">
+              <a href="courses.html" class="nav-link nav-link-courses">
+                <span class="nav-item-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <span class="nav-item-text">Courses</span>
+                <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+                <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+              </a>
+              <button type="button" class="drawer-caret-btn" onclick="toggleCoursesAccordion(event)" aria-label="Toggle courses list">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <!-- Desktop Mega Dropdown Menu -->
+            <div class="courses-mega-menu">
+              <div class="mega-menu-header">
+                <div class="mega-header-title">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Target Examination Programs</span>
+                </div>
+                <a href="courses.html" class="mega-header-link">View All Courses &rarr;</a>
+              </div>
+
+              <div class="mega-menu-grid">
+                <!-- APSC -->
+                <a href="apsc-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-apsc"><i class="fa-solid fa-award"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>APSC CCE / ACS</strong>
+                      <span class="mega-tag tag-top">Top Rated</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Prelims</span><span class="dot">&bull;</span><span>Mains</span><span class="dot">&bull;</span><span>Assam GS</span><span class="dot">&bull;</span><span>Test Series</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- ADRE -->
+                <a href="adre-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-adre"><i class="fa-solid fa-users"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>ADRE 2.0 / 3.0</strong>
+                      <span class="mega-tag tag-hot">High Vacancy</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Grade III (Graduate &amp; HS)</span><span class="dot">&bull;</span><span>Grade IV</span><span class="dot">&bull;</span><span>SLRC Syllabus</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- SSC -->
+                <a href="ssc-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-ssc"><i class="fa-solid fa-landmark"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>SSC Coaching</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>CGL</span><span class="dot">&bull;</span><span>CHSL</span><span class="dot">&bull;</span><span>MTS</span><span class="dot">&bull;</span><span>GD Constable</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- RRB Railways -->
+                <a href="rrb-railways-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-rrb"><i class="fa-solid fa-train"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Railways (RRB)</strong>
+                      <span class="mega-tag tag-new">New Batches</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>RRB NTPC</span><span class="dot">&bull;</span><span>Group D</span><span class="dot">&bull;</span><span>ALP &amp; Technician</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Banking -->
+                <a href="banking-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-banking"><i class="fa-solid fa-building-columns"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Banking &amp; Insurance</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>IBPS PO / Clerk</span><span class="dot">&bull;</span><span>SBI PO / Clerk</span><span class="dot">&bull;</span><span>RBI Assistant</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Assam TET -->
+                <a href="tet-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-tet"><i class="fa-solid fa-chalkboard-user"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Assam TET</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>LP &amp; UP TET</span><span class="dot">&bull;</span><span>High School TET</span><span class="dot">&bull;</span><span>Pedagogy</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- UGC NET -->
+                <a href="ugc-net-coaching.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-net"><i class="fa-solid fa-book-open-reader"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>UGC NET / SLET</strong>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>Paper 1 General Aptitude</span><span class="dot">&bull;</span><span>Teaching &amp; Research</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Computer Diplomas -->
+                <a href="computer-courses.html" class="mega-course-card">
+                  <div class="mega-icon mega-icon-computer"><i class="fa-solid fa-computer"></i></div>
+                  <div class="mega-content">
+                    <div class="mega-heading">
+                      <strong>Computer Diplomas</strong>
+                      <span class="mega-tag tag-cert">Govt. Valid</span>
+                    </div>
+                    <div class="mega-sub-exams">
+                      <span>PGDCA (1 Year)</span><span class="dot">&bull;</span><span>DCA (6 Months)</span><span class="dot">&bull;</span><span>ADCA</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="mega-menu-footer">
+                <div class="mega-footer-info">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Classroom Batches at <strong>Dibrugarh</strong> &amp; <strong>Tezpur</strong> Campuses</span>
+                </div>
+                <a href="tel:+918638757905" class="mega-footer-phone">
+                  <i class="fa-solid fa-phone"></i> Admissions: 8638757905
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Submenu Accordion -->
+            <div class="mobile-courses-accordion" id="mobileCoursesAccordion">
+              <a href="apsc-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-award"></i>
+                <div class="sub-text-col">
+                  <strong>APSC CCE / ACS</strong>
+                  <span>Prelims, Mains, Assam GS</span>
+                </div>
+              </a>
+              <a href="adre-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-users"></i>
+                <div class="sub-text-col">
+                  <strong>ADRE 2.0 / 3.0</strong>
+                  <span>Grade III &amp; Grade IV</span>
+                </div>
+              </a>
+              <a href="ssc-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-landmark"></i>
+                <div class="sub-text-col">
+                  <strong>SSC (CGL, CHSL, MTS)</strong>
+                  <span>Tier I &amp; Tier II</span>
+                </div>
+              </a>
+              <a href="rrb-railways-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-train"></i>
+                <div class="sub-text-col">
+                  <strong>Railways (RRB NTPC &amp; Group D)</strong>
+                  <span>NTPC, Group D, ALP</span>
+                </div>
+              </a>
+              <a href="banking-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-building-columns"></i>
+                <div class="sub-text-col">
+                  <strong>Banking (IBPS &amp; SBI)</strong>
+                  <span>PO, Clerk &amp; RBI Assistant</span>
+                </div>
+              </a>
+              <a href="tet-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <div class="sub-text-col">
+                  <strong>Assam TET</strong>
+                  <span>LP / UP &amp; High School TET</span>
+                </div>
+              </a>
+              <a href="ugc-net-coaching.html" class="mobile-sub-link">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <div class="sub-text-col">
+                  <strong>UGC NET / SLET</strong>
+                  <span>Paper 1 General Aptitude</span>
+                </div>
+              </a>
+              <a href="computer-courses.html" class="mobile-sub-link">
+                <i class="fa-solid fa-computer"></i>
+                <div class="sub-text-col">
+                  <strong>Computer Diplomas</strong>
+                  <span>PGDCA, DCA (Govt. Valid)</span>
+                </div>
+              </a>
+              <a href="courses.html" class="mobile-sub-link view-all-mobile">
+                <i class="fa-solid fa-arrow-right"></i>
+                <div class="sub-text-col">
+                  <strong>View All Courses &amp; Fees</strong>
+                  <span>Full Course Catalog &rarr;</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
           <a href="about.html" class="nav-link">
             <span class="nav-item-icon"><i class="fa-solid fa-building-columns"></i></span>
             <span class="nav-item-text">About Us</span>
+            <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
+          </a>
+          <a href="students-zone.html" class="nav-link">
+            <span class="nav-item-icon"><i class="fa-solid fa-book-open"></i></span>
+            <span class="nav-item-text">Student Zone</span>
             <i class="fa-solid fa-chevron-right nav-item-arrow"></i>
           </a>
           <a href="https://salonlinetest.in/" target="_blank" rel="noopener" class="nav-link">
@@ -560,8 +776,9 @@
           </a>
         </div>
 
+        <!-- Mobile Drawer Action Footer -->
         <div class="mobile-drawer-footer">
-          <button class="btn btn-enquire" onclick="openEnquiryModal('APSC Blog Header Enquiry'); toggleMobileNav();">
+          <button class="btn btn-enquire" onclick="openEnquiryModal('Mobile Nav Admission Enquiry'); toggleMobileNav();">
             <i class="fa-solid fa-paper-plane"></i> Enquire Now
           </button>
           <div class="drawer-quick-contacts">
@@ -571,6 +788,9 @@
             <a href="https://wa.me/918638757905" target="_blank" rel="noopener" class="drawer-contact-pill whatsapp">
               <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
             </a>
+          </div>
+          <div class="drawer-locations-tag">
+            <i class="fa-solid fa-location-dot"></i> Dibrugarh &amp; Tezpur Campuses
           </div>
         </div>
       </nav>
@@ -632,17 +852,17 @@
       <nav class="toc-card" aria-label="Table of contents">
         <div class="toc-title"><i class="fa-solid fa-list-ul"></i> Table of Contents</div>
         <ul class="toc-list">
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#why-apsc"><i class="fa-solid fa-arrow-right"></i> Why Choose APSC as a Career?</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#why-dibrugarh"><i class="fa-solid fa-arrow-right"></i> Why APSC Coaching in Dibrugarh?</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#how-to-choose"><i class="fa-solid fa-arrow-right"></i> 6 Factors to Choose the Best Institute</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#fees"><i class="fa-solid fa-arrow-right"></i> APSC Coaching Fees in Dibrugarh</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#preparation-time"><i class="fa-solid fa-arrow-right"></i> How Long Does Preparation Take?</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#beginner-strategy"><i class="fa-solid fa-arrow-right"></i> Step-by-Step Beginner Strategy</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#assam-gk"><i class="fa-solid fa-arrow-right"></i> Importance of Assam GK (GS-V)</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#online-vs-offline"><i class="fa-solid fa-arrow-right"></i> Online vs Offline APSC Coaching</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#common-mistakes"><i class="fa-solid fa-arrow-right"></i> Common Mistakes to Avoid</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#why-scholar-academy"><i class="fa-solid fa-arrow-right"></i> Why Scholar Academy of Learning?</a></li>
-          <li><a href="blog/best-apsc-coaching-in-dibrugarh#faqs"><i class="fa-solid fa-arrow-right"></i> Frequently Asked Questions</a></li>
+          <li><a href="#why-apsc"><i class="fa-solid fa-arrow-right"></i> Why Choose APSC as a Career?</a></li>
+          <li><a href="#why-dibrugarh"><i class="fa-solid fa-arrow-right"></i> Why APSC Coaching in Dibrugarh?</a></li>
+          <li><a href="#how-to-choose"><i class="fa-solid fa-arrow-right"></i> 6 Factors to Choose the Best Institute</a></li>
+          <li><a href="#fees"><i class="fa-solid fa-arrow-right"></i> APSC Coaching Fees in Dibrugarh</a></li>
+          <li><a href="#preparation-time"><i class="fa-solid fa-arrow-right"></i> How Long Does Preparation Take?</a></li>
+          <li><a href="#beginner-strategy"><i class="fa-solid fa-arrow-right"></i> Step-by-Step Beginner Strategy</a></li>
+          <li><a href="#assam-gk"><i class="fa-solid fa-arrow-right"></i> Importance of Assam GK (GS-V)</a></li>
+          <li><a href="#online-vs-offline"><i class="fa-solid fa-arrow-right"></i> Online vs Offline APSC Coaching</a></li>
+          <li><a href="#common-mistakes"><i class="fa-solid fa-arrow-right"></i> Common Mistakes to Avoid</a></li>
+          <li><a href="#why-scholar-academy"><i class="fa-solid fa-arrow-right"></i> Why Scholar Academy of Learning?</a></li>
+          <li><a href="#faqs"><i class="fa-solid fa-arrow-right"></i> Frequently Asked Questions</a></li>
         </ul>
       </nav>
 
@@ -748,15 +968,15 @@
         <span style="background: rgba(250, 204, 21, 0.2); color: #facc15; font-size: 0.82rem; font-weight: 800; padding: 0.25rem 0.85rem; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 0.75rem;">
           Classroom Foundation Program
         </span>
-        <h3>APSC CCE Foundation Batches at Scholar Academy Dibrugarh</h3>
+        <h3>APSC Foundation Course</h3>
         <p>
-          12-Month full classroom coaching for Prelims & Mains (GS-I to GS-V), weekly answer-writing reviews, 40+ mock tests, and personal faculty mentorship at Lachit Nagar, Dibrugarh.
+          12-Month full classroom coaching for Prelims &amp; Mains (GS-I to GS-V), weekly answer-writing reviews, 40+ mock tests, and personal faculty mentorship at Lachit Nagar, Dibrugarh.
         </p>
         <div class="cta-banner-actions">
           <a href="tel:+918638757905" class="btn btn-blue" style="background: #facc15; color: #0b2545; font-weight: 800;">
             <i class="fa-solid fa-phone"></i> Call 8638757905
           </a>
-          <a href="courses/apsc" class="btn btn-outline-video" style="background: rgba(255,255,255,0.12); color: #ffffff; border-color: rgba(255,255,255,0.35);">
+          <a href="apsc-coaching.html" class="btn btn-outline-video" style="background: rgba(255,255,255,0.12); color: #ffffff; border-color: rgba(255,255,255,0.35);">
             <i class="fa-solid fa-graduation-cap"></i> View APSC Course Details
           </a>
         </div>
@@ -768,22 +988,23 @@
         One of the most frequent questions aspirants ask is: <em>"How much does APSC coaching cost in Dibrugarh?"</em>
       </p>
       <p>
-        The fee typically ranges depending on:
+        At Scholar Academy, we offer a dedicated, all-inclusive program:
       </p>
       <ul>
-        <li><strong>Course Duration:</strong> 12-Month Foundation vs. 5-Month Prelims Fast-Track.</li>
-        <li><strong>Coverage:</strong> Prelims only vs. Integrated Prelims + Mains + Interview Guidance.</li>
-        <li><strong>Included Features:</strong> Printed study modules, GS-V special material, answer-writing evaluation, and full mock test series.</li>
-        <li><strong>Mode:</strong> Offline classroom instruction vs. Hybrid/Online access.</li>
+        <li><strong>Course Duration:</strong> 1-Year Integrated Foundation Batch.</li>
+        <li><strong>Coverage:</strong> Integrated Prelims-cum-Mains (GS-I to GS-V) + Interview Guidance.</li>
+        <li><strong>Included Features:</strong> Complete printed study modules, GS-V special Assam material, weekly answer-writing evaluation, and full mock test series.</li>
+        <li><strong>Mode:</strong> Offline classroom instruction with hybrid backup access.</li>
+        <li><strong>All-Inclusive Fee:</strong> ₹45,000 (transparent pricing with installment options).</li>
       </ul>
       <p>
-        Rather than picking a centre solely based on the lowest fee, evaluate the <strong>overall educational value</strong>: faculty quality, individual answer writing reviews, and learning infrastructure. Check our detailed <a href="courses/apsc" class="internal-link">APSC Course curriculum & fees</a> or visit our Dibrugarh campus for installment options and merit scholarships.
+        Rather than picking a centre solely based on the lowest fee, evaluate the <strong>overall educational value</strong>: faculty quality, individual answer writing reviews, and learning infrastructure. Check our detailed <a href="apsc-coaching.html" class="internal-link">APSC Course curriculum & fees</a> or visit our Dibrugarh campus for installment options and merit scholarships.
       </p>
 
       <!-- Section 5 -->
       <h2 id="preparation-time"><i class="fa-solid fa-hourglass-half" style="color: var(--primary-blue); font-size: 1.25rem;"></i> How Long Does APSC Preparation Take?</h2>
       <p>
-        There is no one-size-fits-all timeline. A beginner starting from scratch generally requires <strong>10 to 12 months</strong> of dedicated preparation to master basic NCERTs, reference materials, Assam GS, and answer-writing. Candidates with prior competitive exam experience (such as <a href="courses/adre" class="internal-link">ADRE</a> or SSC) may progress faster.
+        There is no one-size-fits-all timeline. A beginner starting from scratch generally requires <strong>10 to 12 months</strong> of dedicated preparation to master basic NCERTs, reference materials, Assam GS, and answer-writing. Candidates with prior competitive exam experience (such as <a href="adre-coaching.html" class="internal-link">ADRE</a> or SSC) may progress faster.
       </p>
       <p>
         Your preparation timeline depends on:
@@ -811,7 +1032,7 @@
       </ol>
 
       <p>
-        If you are also preparing for other state recruitments simultaneously, read our companion guide on the <a href="blog/adre-preparation-strategy-2027" class="internal-link">ADRE Preparation Strategy 2027: Complete Study Plan, Syllabus & Exam Tips</a>.
+        If you are also preparing for other state recruitments simultaneously, read our companion guide on the <a href="adre-preparation-strategy-2027.html" class="internal-link">ADRE Preparation Strategy 2027: Complete Study Plan, Syllabus &amp; Exam Tips</a>.
       </p>
 
       <!-- Section 7 -->
@@ -901,7 +1122,11 @@
       </div>
 
       <p>
-        Along with our flagship APSC Foundation Program, we also offer specialized coaching for <a href="courses/adre" class="internal-link">ADRE 2.0 / 3.0</a>, <a href="courses/ssc" class="internal-link">SSC CGL / CHSL</a>, <a href="courses/banking" class="internal-link">Banking (IBPS/SBI)</a>, and <a href="courses/tet" class="internal-link">Assam TET</a>.
+        Along with our flagship APSC Foundation Program, we also offer specialized coaching for <a href="courses/adre" class="internal-link">ADRE 3.0</a>, <a href="courses/ssc" class="internal-link">SSC CGL / CHSL</a>, <a href="courses/banking" class="internal-link">Banking (IBPS/SBI)</a>, and <a href="courses/tet" class="internal-link">Assam TET</a>.
+      </p>
+
+      <p style="font-size: 0.98rem; color: #475569; margin-top: 1rem; background: #f1f5f9; padding: 0.85rem 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--primary-blue);">
+        💡 <strong>Preparing for Banking or State Exams as well?</strong> Check out our complete guides: <a href="banking-coaching-in-dibrugarh-and-tezpur.html" style="color: var(--primary-blue); font-weight: 700; text-decoration: underline;">Banking Coaching in Dibrugarh and Tezpur (IBPS &amp; SBI Prep)</a> and <a href="adre-preparation-strategy-2027.html" style="color: var(--primary-blue); font-weight: 700; text-decoration: underline;">ADRE 2027 Preparation Strategy</a>.
       </p>
 
       <!-- Section 11: FAQs -->
@@ -924,7 +1149,7 @@
             <i class="fa-solid fa-chevron-down"></i>
           </summary>
           <p>
-            APSC coaching fees vary based on course duration, faculty, and test inclusions. At Scholar Academy, we offer transparent pricing, inclusive printed materials, and flexible installment options. <a href="contact.html" class="internal-link">Contact our counselors</a> for the current batch fee structure.
+            APSC coaching fees vary based on course duration, faculty, and test inclusions. At Scholar Academy, our all-inclusive 1-Year Integrated Foundation Batch is offered at ₹45,000 with transparent pricing, inclusive printed materials, 60+ mock tests, and flexible installment options. <a href="contact.html" class="internal-link">Contact our counselors</a> for batch admissions.
           </p>
         </details>
 
@@ -1021,12 +1246,14 @@
         <div class="footer-col">
           <h4>Our Courses</h4>
           <ul class="footer-links">
-            <li><a href="courses/apsc">APSC Foundation Course</a></li>
-            <li><a href="courses/adre">ADRE 2.0 (Grade III & IV)</a></li>
-            <li><a href="courses/ssc">SSC CGL / CHSL / MTS</a></li>
-            <li><a href="courses/banking">Banking (IBPS / SBI PO)</a></li>
-            <li><a href="courses/tet">Assam TET Preparation</a></li>
-            <li><a href="courses/other">Other Courses (Railways/Defence)</a></li>
+            <li><a href="apsc-coaching.html">APSC Foundation Course</a></li>
+            <li><a href="adre-coaching.html">ADRE 2.0 (Grade III & IV)</a></li>
+            <li><a href="ssc-coaching.html">SSC CGL / CHSL / MTS</a></li>
+            <li><a href="banking-coaching.html">Banking (IBPS / SBI PO)</a></li>
+            <li><a href="rrb-railways-coaching.html">Railways & Defence Exams</a></li>
+            <li><a href="tet-coaching.html">Assam TET Preparation</a></li>
+            <li><a href="ugc-net-coaching.html">UGC NET / SLET Paper-1</a></li>
+            <li><a href="computer-courses.html">Computer Diplomas (PGDCA/DCA)</a></li>
           </ul>
         </div>
 
@@ -1054,7 +1281,8 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Scholar Academy of Learning. All Rights Reserved. Dibrugarh & Tezpur, Assam.</p>
+        <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.5; margin-bottom: 0.8rem; text-align: center;">Scholar Academy of Learning is a premier private coaching &amp; competitive examination preparation institute. We provide classroom coaching, study materials, and mock test guidance. We are an independent educational body and are not affiliated with, endorsed by, or connected to APSC, SLRC, SSC, IBPS, or any government agency. Official notifications should be verified on respective recruitment portals.</p>
+        <p>© 2026 Scholar Academy of Learning. All Rights Reserved. Dibrugarh &amp; Tezpur, Assam.</p>
       </div>
     </div>
   </footer>
@@ -1158,5 +1386,6 @@
       }, 4000);
     }
   </script>
+  <script src="web3forms.js"></script>
 </body>
 </html>
