@@ -299,6 +299,10 @@ img {
   display: none; /* hidden on desktop */
 }
 
+.mobile-courses-accordion {
+  display: none; /* hidden on desktop */
+}
+
 /* Desktop Mega Menu Dropdown */
 .courses-mega-menu {
   position: absolute;
@@ -2807,7 +2811,8 @@ body.mobile-nav-open {
     flex: 1;
   }
 
-  .nav-link-dropdown-row .nav-dropdown-icon {
+  .nav-link-dropdown-row .nav-dropdown-icon,
+  .nav-link-dropdown-row .nav-item-arrow {
     display: none !important;
   }
 

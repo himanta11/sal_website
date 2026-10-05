@@ -268,7 +268,7 @@ function toggleCoursesAccordion(e) {
     e.stopPropagation();
   }
   const accordion = document.getElementById("mobileCoursesAccordion");
-  const btn = document.querySelector(".drawer-caret-btn");
+  const btn = (e && e.currentTarget) ? e.currentTarget : document.querySelector(".drawer-caret-btn");
   if (accordion) {
     const isOpen = accordion.classList.toggle("open");
     if (btn) btn.classList.toggle("open", isOpen);
