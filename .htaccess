@@ -7,6 +7,13 @@
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
+  # Route static assets, stylesheets, and scripts requested from virtual subfolders to root
+  RewriteRule ^.+/(assets/.*)$ $1 [L,NC]
+  RewriteRule ^.+/(style\.css.*)$ style.css [L,NC]
+  RewriteRule ^.+/(web3forms\.js.*)$ web3forms.js [L,NC]
+  RewriteRule ^(?:blog|courses)/([^/]+\.html)$ $1 [L,R=301]
+
+
   # 2. Dedicated Category Page clean routing (/courses/apsc -> apsc-coaching.html)
   RewriteRule ^courses/apsc/?$ apsc-coaching.html [L,QSA]
   RewriteRule ^courses/adre/?$ adre-coaching.html [L,QSA]
