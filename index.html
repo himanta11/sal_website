@@ -1483,6 +1483,210 @@
     </div>
   </footer>
 
+  <!-- STYLE FOR MOCK TEST PROMO MODAL -->
+  <style>
+    .mock-test-promo-box {
+      background: #ffffff;
+      border-radius: 20px;
+      max-width: 480px;
+      width: 92%;
+      max-height: 92vh;
+      max-height: 92dvh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 60px -10px rgba(0, 56, 130, 0.45), 0 0 0 1px rgba(226, 232, 240, 0.8);
+      position: relative;
+      margin: auto;
+      transform: translateY(16px) scale(0.96);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      z-index: 100000 !important;
+    }
+    .modal-overlay.active .mock-test-promo-box {
+      transform: translateY(0) scale(1);
+    }
+    .mock-test-poster-area {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      background: #091e3e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 68vh;
+    }
+    .mock-test-promo-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      max-height: 68vh;
+      transition: transform 0.3s ease;
+    }
+    .mock-test-poster-area:hover .mock-test-promo-img {
+      transform: scale(1.02);
+    }
+    .mock-test-click-overlay {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      text-align: center;
+      pointer-events: none;
+    }
+    .click-prompt-badge {
+      background: rgba(9, 30, 62, 0.95);
+      color: #facc15;
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      border: 1.5px solid rgba(250, 204, 21, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      animation: pulseAlert 2s infinite;
+    }
+    .mock-test-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.75);
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    }
+    .mock-test-close-btn:hover {
+      background: #ef4444;
+      border-color: #ffffff;
+      transform: rotate(90deg);
+    }
+    .mock-test-footer-bar {
+      padding: 0.85rem 1.15rem;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .mock-test-footer-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+    .mock-test-footer-text strong {
+      color: #0b2545;
+      font-size: 0.92rem;
+    }
+    .mock-test-btn-group {
+      display: flex;
+      gap: 0.45rem;
+      align-items: center;
+    }
+    .mocktest-floating-badge {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background: linear-gradient(135deg, #003882 0%, #0d6efd 100%);
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      box-shadow: 0 6px 20px rgba(0, 56, 130, 0.35);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 890;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+    .mocktest-floating-badge:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 56, 130, 0.45);
+      background: linear-gradient(135deg, #0d6efd 0%, #002b66 100%);
+    }
+    .badge-pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      animation: pulseAlert 1.8s infinite;
+    }
+    @media (max-width: 600px) {
+      .mock-test-promo-box {
+        max-width: 94vw;
+        border-radius: 16px;
+      }
+      .mocktest-floating-badge {
+        bottom: 85px;
+        left: 15px;
+        padding: 0.5rem 0.85rem;
+        font-size: 0.78rem;
+      }
+    }
+  </style>
+
+  <!-- MOCK TEST PROMO IMAGE POPUP (HOME SCREEN) -->
+  <div class="modal-overlay" id="mockTestPromoModal" aria-modal="true" role="dialog" aria-label="ADRE 3.0 Mock Test Series Announcement">
+    <div class="mock-test-promo-box">
+      <button class="mock-test-close-btn" onclick="closeMockTestPromoModal()" aria-label="Close Promo Popup">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Clickable Poster: Click anywhere on the poster to show the form -->
+      <div class="mock-test-poster-area" onclick="openEnquiryFromPromo('ADRE 3.0 Mock Test Series')" title="Click anywhere to open registration form">
+        <img src="assets/Scholar Academy Mock Tests & PYQSCORE-1.png" alt="Scholar Academy ADRE 3.0 Mock Test in Assam - Offline Dibrugarh & Online PYQScore" class="mock-test-promo-img">
+        <div class="mock-test-click-overlay">
+          <span class="click-prompt-badge">
+            <i class="fa-solid fa-hand-pointer"></i> Click Here to Register &amp; Book Seat
+          </span>
+        </div>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="mock-test-footer-bar">
+        <div class="mock-test-footer-text">
+          <strong><i class="fa-solid fa-fire" style="color: #ef4444;"></i> ADRE 3.0 Mock Tests</strong>
+          <span>Starts 8 Nov &bull; Offline (Dibrugarh) &amp; PYQScore App</span>
+        </div>
+        <div class="mock-test-btn-group">
+          <button type="button" class="btn btn-blue btn-sm" onclick="openEnquiryFromPromo('ADRE 3.0 Mock Test Series')" style="font-weight: 800; padding: 0.55rem 1rem; background: #0d6efd;">
+            <i class="fa-solid fa-file-pen"></i> Register Form
+          </button>
+          <a href="adre-mock-test-assam.html" class="btn btn-outline-video btn-sm" style="padding: 0.55rem 0.85rem; border-color: #cbd5e1; color: #1e293b;">
+            Details &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING MOCK TEST BADGE TO REOPEN POPUP -->
+  <button type="button" class="mocktest-floating-badge" onclick="openMockTestPromoModal()" title="View ADRE 3.0 Mock Test Series" aria-label="View Mock Test Series">
+    <span class="badge-pulse-dot"></span>
+    <i class="fa-solid fa-file-pen"></i>
+    <span>ADRE 3.0 Mock Tests</span>
+  </button>
+
   <!-- 10. ENQUIRY MODAL (AUTO-POPUP & ON-DEMAND) -->
   <div class="modal-overlay" id="enquiryModal">
     <div class="modal-box">
@@ -1589,6 +1793,28 @@
        JAVASCRIPT LOGIC
        ========================================================================== -->
   <script>
+    /* Mock Test Promo Controls */
+    function openMockTestPromoModal() {
+      const promoModal = document.getElementById('mockTestPromoModal');
+      if (promoModal) {
+        promoModal.classList.add('active');
+        document.body.classList.add('modal-open');
+      }
+    }
+
+    function closeMockTestPromoModal() {
+      const promoModal = document.getElementById('mockTestPromoModal');
+      if (promoModal) {
+        promoModal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+      }
+    }
+
+    function openEnquiryFromPromo(courseName) {
+      closeMockTestPromoModal();
+      openEnquiryModal(courseName || 'ADRE 3.0 Mock Test Series');
+    }
+
     /* Modal Controls */
     function openEnquiryModal(courseName = '') {
       const targetInput = document.getElementById('modalCourseTarget');
@@ -1597,7 +1823,10 @@
       const subtitle = document.getElementById('modalSubtitle');
       const courseInput = document.getElementById('modalCourseSelect');
 
-      if (courseName && courseName !== 'Welcome Site Popup Enquiry' && courseName !== 'General Admission Enquiry' && courseName !== 'Admissions Open 2026-27') {
+      if (courseName === 'ADRE 3.0 Mock Test Series' || (courseName && courseName.includes('Mock Test'))) {
+        if (subtitle) subtitle.innerText = `Register for ADRE 3.0 Offline (Dibrugarh) & Online (PYQScore App) Mock Test Series.`;
+        if (courseInput) courseInput.value = 'ADRE 3.0 Mock Test Series';
+      } else if (courseName && courseName !== 'Welcome Site Popup Enquiry' && courseName !== 'General Admission Enquiry' && courseName !== 'Admissions Open 2026-27') {
         if (subtitle) subtitle.innerText = `Batch & Admission Enquiry for: ${courseName}`;
         if (courseInput) {
           courseInput.value = courseName;
@@ -1663,15 +1892,15 @@
       e.target.reset();
     }
 
-    // Auto popup enquiry form when the site is opened
+    // Auto popup Mock Test Poster when the site is opened
     function initAutoSitePopup() {
       setTimeout(() => {
-        const enquiryModal = document.getElementById('enquiryModal');
+        const promoModal = document.getElementById('mockTestPromoModal');
         const videoModal = document.getElementById('videoModal');
-        if (enquiryModal && !enquiryModal.classList.contains('active') && (!videoModal || !videoModal.classList.contains('active'))) {
-          openEnquiryModal('Admissions Open 2026-27');
+        if (promoModal && (!videoModal || !videoModal.classList.contains('active'))) {
+          openMockTestPromoModal();
         }
-      }, 1000);
+      }, 800);
     }
 
     if (document.readyState === 'loading') {
@@ -1752,6 +1981,7 @@
       if (e.target.classList.contains('modal-overlay')) {
         closeEnquiryModal();
         closeVideoModal();
+        closeMockTestPromoModal();
       }
     });
 
@@ -1759,6 +1989,7 @@
       if (e.key === 'Escape') {
         closeEnquiryModal();
         closeVideoModal();
+        closeMockTestPromoModal();
       }
     });
 

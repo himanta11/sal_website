@@ -544,6 +544,7 @@
       <!-- Category Filter Pills -->
       <div class="blog-filter-bar">
         <button class="filter-btn active" onclick="filterBlogCards('all', this)"><i class="fa-solid fa-layer-group"></i> All Articles</button>
+        <button class="filter-btn" onclick="filterBlogCards('mock-test', this)"><i class="fa-solid fa-file-pen"></i> Mock Tests</button>
         <button class="filter-btn" onclick="filterBlogCards('adre', this)"><i class="fa-solid fa-file-lines"></i> ADRE 2027</button>
         <button class="filter-btn" onclick="filterBlogCards('apsc', this)"><i class="fa-solid fa-landmark-dome"></i> APSC CCE</button>
         <button class="filter-btn" onclick="filterBlogCards('ssc', this)"><i class="fa-solid fa-award"></i> SSC Exams</button>
@@ -552,6 +553,45 @@
 
       <!-- Articles Grid -->
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
+        
+        <!-- Featured Article: ADRE 3.0 Mock Test in Assam -->
+        <article class="blog-article-card" data-category="adre mock-test" style="border: 2px solid #93c5fd; position: relative;">
+          <div style="margin: -2.2rem -2.2rem 1.5rem; overflow: hidden; border-top-left-radius: var(--radius-lg); border-top-right-radius: var(--radius-lg);">
+            <a href="adre-mock-test-assam.html" style="display: block;">
+              <img src="assets/Scholar Academy Mock Tests & PYQSCORE-1.png" alt="ADRE 3.0 Mock Test in Assam Offline & Online on PYQScore" style="width: 100%; height: 210px; object-fit: cover; display: block;">
+            </a>
+          </div>
+          <div>
+            <div class="article-meta-row">
+              <span class="job-alert-badge" style="background: #eff6ff; color: var(--primary-blue);">
+                <i class="fa-solid fa-file-pen"></i> Mock Test Series
+              </span>
+              <span class="job-alert-badge" style="background: #fef3c7; color: #b45309;">
+                <i class="fa-solid fa-fire"></i> Starts 8 Nov 2026
+              </span>
+              <span><i class="fa-regular fa-clock"></i> 7 Min Read</span>
+            </div>
+            
+            <h2 style="font-size: 1.32rem; font-weight: 800; color: var(--dark-navy); line-height: 1.35; margin-bottom: 0.85rem;">
+              <a href="adre-mock-test-assam.html" style="color: inherit; text-decoration: none; transition: var(--transition);">
+                ADRE 3.0 Mock Test in Assam: Offline &amp; Online Mock Tests for ADRE, DME, TET and Assam Police
+              </a>
+            </h2>
+
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">
+              Preparing for ADRE 3.0, DME, TET or Assam Police? Join our Offline Mock Test Series in Dibrugarh starting 8 Nov 2026 or practise online via PYQScore App. 10 mock tests, classroom analysis, ₹150/test &amp; capacity 60 students.
+            </p>
+          </div>
+
+          <div style="border-top: 1px solid #f1f5f9; padding-top: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.84rem; font-weight: 600; color: #94a3b8;">
+              <i class="fa-regular fa-user" style="margin-right: 4px;"></i> Scholar Academy Team
+            </span>
+            <a href="adre-mock-test-assam.html" class="btn btn-blue btn-sm" style="padding: 0.45rem 1rem;">
+              Read Full Details &rarr;
+            </a>
+          </div>
+        </article>
         
         <!-- Featured Article 1: ADRE 2027 -->
         <article class="blog-article-card" data-category="adre">
@@ -931,7 +971,8 @@
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       if (btn) btn.classList.add('active');
       document.querySelectorAll('.blog-article-card').forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
+        const cats = (card.getAttribute('data-category') || '').split(' ');
+        if (category === 'all' || cats.includes(category)) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
