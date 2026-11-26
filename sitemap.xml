@@ -1,207 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Institute Pages -->
   <url>
     <loc>https://salcoaching.in/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/courses.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <loc>https://salcoaching.in/courses/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/apsc-coaching.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <loc>https://salcoaching.in/about/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://salcoaching.in/contact/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://salcoaching.in/blog/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Dedicated Campus Location Pages -->
+  <url>
+    <loc>https://salcoaching.in/coaching-in-dibrugarh/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/adre-coaching.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <loc>https://salcoaching.in/coaching-in-tezpur/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/ssc-coaching.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/banking-coaching.html</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://salcoaching.in/banking-coaching-in-dibrugarh/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
   </url>
   <url>
     <loc>https://salcoaching.in/banking-coaching-in-tezpur/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- Authoritative Canonical Core Course Pages -->
+  <url>
+    <loc>https://salcoaching.in/apsc-coaching/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://salcoaching.in/adre-coaching/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://salcoaching.in/banking-coaching/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/rrb-railways-coaching.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <loc>https://salcoaching.in/assam-police-coaching/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/tet-coaching.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <loc>https://salcoaching.in/ssc-coaching/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/ugc-net-coaching.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <loc>https://salcoaching.in/rrb-railways-coaching/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://salcoaching.in/tet-coaching/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://salcoaching.in/ugc-net-coaching/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/computer-courses.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <loc>https://salcoaching.in/computer-courses/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
+
+  <!-- Key Informational Guides & PYQ Resources -->
   <url>
-    <loc>https://salcoaching.in/about.html</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/contact.html</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/blog.html</loc>
-    <lastmod>2026-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/best-tet-and-ctet-coaching-in-dibrugarh</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/best-mock-test-pyq-app-adre-3-assam-competitive-exams-pyqscore</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/top-100-assam-gk-questions-for-adre-apsc-police-exams</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/adre-vs-banking-exam-syllabus-comparison-preparation-strategy</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/best-banking-coaching-in-dibrugarh</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/blog/best-competitive-exam-coaching-in-dibrugarh-and-tezpur</loc>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/blog/best-assam-police-exam-coaching-in-dibrugarh-and-tezpur</loc>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/blog/how-to-prepare-for-banking-ssc-adre-apsc-in-dibrugarh</loc>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/how-to-prepare-for-adre-exam-2027</loc>
-    <lastmod>2026-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/90-day-master-study-plan-crack-adre-grade-3.html</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/blog/adre-preparation-strategy-2027</loc>
-    <lastmod>2026-09-14</lastmod>
+    <loc>https://salcoaching.in/how-to-prepare-for-adre-exam-2027/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/blog/best-apsc-coaching-in-dibrugarh</loc>
-    <lastmod>2026-09-14</lastmod>
+    <loc>https://salcoaching.in/90-day-master-study-plan-crack-adre-grade-3/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/blog/banking-coaching-in-dibrugarh-and-tezpur</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://salcoaching.in/adre-grade-3-question-paper-pdf-download-free-answer-key/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/blog/adre-mock-test-assam</loc>
-    <lastmod>2026-10-28</lastmod>
+    <loc>https://salcoaching.in/top-100-assam-gk-questions-for-adre-apsc-police-exams/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://salcoaching.in/blog/adre-grade-3-question-paper-pdf-download-free-answer-key</loc>
-    <lastmod>2026-11-11</lastmod>
+    <loc>https://salcoaching.in/best-mock-test-pyq-app-adre-3-assam-competitive-exams-pyqscore/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/news-events.html</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/students-zone.html</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/gallery.html</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://salcoaching.in/franchise.html</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.90</priority>
   </url>
 </urlset>

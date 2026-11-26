@@ -2,12 +2,30 @@
   RewriteEngine On
   RewriteBase /
 
-  # Legacy & Defunct URL 301 Redirects
-  RewriteRule ^sitemap_index\.xml$ /sitemap.xml [R=301,L]
-  RewriteRule ^apsc-banking/?$ /apsc-coaching.html [R=301,L]
-  RewriteRule ^new-batches-apsc-banking/?$ /apsc-coaching.html [R=301,L]
+  # 1. Enforce HTTPS & Non-WWW Canonical Domain (https://salcoaching.in/)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\.salcoaching\.in$ [NC]
+  RewriteRule ^(.*)$ https://salcoaching.in/$1 [L,R=301]
 
-  # 1. Do not rewrite existing physical files or directories (css, js, images, etc.)
+  # 2. Canonical 301 Redirects: Consolidate Duplicate & Cannibalizing Topic URLs
+  RewriteRule ^best-apsc-coaching-in-dibrugarh(?:\.html)?/?$ /apsc-coaching/ [R=301,L]
+  RewriteRule ^best-apsc-coaching-in-dibrugarh-and-tezpur-cce-strategy(?:\.html)?/?$ /apsc-coaching/ [R=301,L]
+  RewriteRule ^best-banking-coaching-in-dibrugarh(?:\.html)?/?$ /banking-coaching-in-dibrugarh/ [R=301,L]
+  RewriteRule ^banking-coaching-in-dibrugarh-and-tezpur(?:\.html)?/?$ /banking-coaching/ [R=301,L]
+  RewriteRule ^best-assam-police-exam-coaching-in-dibrugarh-and-tezpur(?:\.html)?/?$ /assam-police-coaching/ [R=301,L]
+  RewriteRule ^best-tet-and-ctet-coaching-in-dibrugarh(?:\.html)?/?$ /tet-coaching/ [R=301,L]
+  RewriteRule ^best-competitive-exam-coaching-in-dibrugarh-and-tezpur(?:\.html)?/?$ /courses/ [R=301,L]
+  RewriteRule ^adre-vs-banking-exam-syllabus-comparison-preparation-strategy(?:\.html)?/?$ /adre-coaching/ [R=301,L]
+  RewriteRule ^why-scholar-academy-of-learning-is-the-top-choice-in-dibrugarh-and-tezpur(?:\.html)?/?$ /about/ [R=301,L]
+  RewriteRule ^apsc-banking/?$ /apsc-coaching/ [R=301,L]
+  RewriteRule ^new-batches-apsc-banking/?$ /apsc-coaching/ [R=301,L]
+  RewriteRule ^sitemap_index\.xml$ /sitemap.xml [R=301,L]
+
+  # 3. Clean URL Standard: Redirect *.html to clean path (e.g. /apsc-coaching.html -> /apsc-coaching/)
+  RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+  RewriteRule ^ /%1/ [NC,L,R=301]
+
+  # 4. Do not rewrite real files or directories (assets, css, js, images)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
@@ -16,32 +34,41 @@
   RewriteRule ^.+/(assets/.*)$ $1 [L,NC]
   RewriteRule ^.+/(style\.css.*)$ style.css [L,NC]
   RewriteRule ^.+/(web3forms\.js.*)$ web3forms.js [L,NC]
-  RewriteRule ^(?:blog|courses)/([^/]+\.html)$ $1 [L,R=301]
 
+  # 5. Core Canonical Route Mappings
+  RewriteRule ^apsc-coaching/?$ apsc-coaching.html [L,QSA]
+  RewriteRule ^adre-coaching/?$ adre-coaching.html [L,QSA]
+  RewriteRule ^banking-coaching/?$ banking-coaching.html [L,QSA]
+  RewriteRule ^banking-coaching-in-dibrugarh/?$ banking-coaching-in-dibrugarh.html [L,QSA]
+  RewriteRule ^banking-coaching-in-tezpur/?$ banking-coaching-in-tezpur.html [L,QSA]
+  RewriteRule ^coaching-in-dibrugarh/?$ coaching-in-dibrugarh.html [L,QSA]
+  RewriteRule ^coaching-in-tezpur/?$ coaching-in-tezpur.html [L,QSA]
+  RewriteRule ^assam-police-coaching/?$ assam-police-coaching.html [L,QSA]
+  RewriteRule ^ssc-coaching/?$ ssc-coaching.html [L,QSA]
+  RewriteRule ^rrb-railways-coaching/?$ rrb-railways-coaching.html [L,QSA]
+  RewriteRule ^tet-coaching/?$ tet-coaching.html [L,QSA]
+  RewriteRule ^ugc-net-coaching/?$ ugc-net-coaching.html [L,QSA]
+  RewriteRule ^computer-courses/?$ computer-courses.html [L,QSA]
+  RewriteRule ^courses/?$ courses.html [L,QSA]
+  RewriteRule ^about/?$ about.html [L,QSA]
+  RewriteRule ^contact/?$ contact.html [L,QSA]
+  RewriteRule ^blog/?$ blog.html [L,QSA]
 
-  # 2. Dedicated Category Page clean routing (/courses/apsc -> apsc-coaching.html)
+  # Backward compatibility course category queries
   RewriteRule ^courses/apsc/?$ apsc-coaching.html [L,QSA]
   RewriteRule ^courses/adre/?$ adre-coaching.html [L,QSA]
   RewriteRule ^courses/ssc/?$ ssc-coaching.html [L,QSA]
   RewriteRule ^courses/banking/?$ banking-coaching.html [L,QSA]
   RewriteRule ^courses/rrb/?$ rrb-railways-coaching.html [L,QSA]
   RewriteRule ^courses/railways/?$ rrb-railways-coaching.html [L,QSA]
-  RewriteRule ^courses/other/?$ rrb-railways-coaching.html [L,QSA]
   RewriteRule ^courses/tet/?$ tet-coaching.html [L,QSA]
   RewriteRule ^courses/ugc-net/?$ ugc-net-coaching.html [L,QSA]
   RewriteRule ^courses/computer/?$ computer-courses.html [L,QSA]
 
-  # 3. Rewrite clean /courses to courses.html
-  RewriteRule ^courses/?$ courses.html [L,QSA]
-
-  # 4. Fallback for any other category query
-  RewriteRule ^courses/([a-zA-Z0-9_-]+)/?$ courses.html?category=$1 [L,QSA]
-  RewriteRule ^courses\.html/([a-zA-Z0-9_-]+)/?$ courses.html?category=$1 [L,QSA]
-
-  # 5. Rewrite /blog/{slug} to {slug}.html
+  # Clean blog slug
   RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ $1.html [L,QSA]
 
-  # 6. Clean URLs for other pages (e.g. /about -> about.html)
+  # 6. Fallback clean URLs
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^([^/]+)/?$ $1.html [L,QSA]
 </IfModule>
@@ -51,5 +78,10 @@
     Header set Content-Type "application/xml; charset=utf-8"
     Header set X-Content-Type-Options "nosniff"
   </Files>
+  <Files "robots.txt">
+    Header set Content-Type "text/plain; charset=utf-8"
+  </Files>
+  <Files "llms.txt">
+    Header set Content-Type "text/plain; charset=utf-8"
+  </Files>
 </IfModule>
-

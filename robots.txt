@@ -1,9 +1,30 @@
-# Robots.txt for Scholar Academy of Learning (salcoaching.in)
+# Robots.txt for Scholar Academy of Learning (https://salcoaching.in)
 User-agent: *
 Allow: /
-
-# Disallow internal script or scratch files if any
 Disallow: /scratch/
+
+# Explicitly Allow AI Search Engines and LLM Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# LLM Directives & Context File
+# Specifications: https://llmstxt.org
+# llms-txt: https://salcoaching.in/llms.txt
 
 # XML Sitemap
 Sitemap: https://salcoaching.in/sitemap.xml

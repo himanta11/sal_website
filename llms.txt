@@ -1,0 +1,61 @@
+# Scholar Academy of Learning
+
+> Premier competitive examination coaching institute and academic academy in Upper Assam (est. 2016), operating physical learning campuses in Dibrugarh and Tezpur, and providing statewide online batches and computer-based mock tests via PYQscore.in.
+
+## Institute Overview
+- **Name:** Scholar Academy of Learning (SAL)
+- **Established:** February 13, 2016
+- **Website:** https://salcoaching.in/
+- **Primary Phone Numbers:** +91 86387 57905, +91 95086 02878
+- **Email:** saoldibrugarh@gmail.com
+- **Sister Testing Platform:** PYQscore (https://pyqscore.in/ & Google Play Store App: "PYQScore : ADRE Mocktest & PYQ")
+
+## Learning Campuses & Locations
+- **Dibrugarh Campus (Head Office):**
+  - Address: Lachit Nagar, near St. Jude School, Dibrugarh, Assam – 786001, India
+  - Geo-Coordinates: 27.473793, 94.9173314
+  - Facilities: Air-conditioned smart classrooms, digital interactive panels, dedicated library, computer-based mock test lab.
+  - Hours: Monday to Saturday (8:00 AM - 8:00 PM), Sunday (10:00 AM - 3:00 PM)
+
+- **Tezpur Campus (Regional Hub):**
+  - Address: Murha Teteli, near ASTC Bus Stand, Tezpur, Sonitpur, Assam – 784001, India
+  - Geo-Coordinates: 26.636545, 92.782259
+  - Facilities: Classroom coaching, study room, faculty mentoring, online CBT practice terminals.
+  - Hours: Monday to Saturday (8:00 AM - 7:30 PM), Sunday (By Appointment)
+
+## Core Coaching Programs
+1. **APSC CCE (Combined Competitive Examination):** Comprehensive Prelims + Mains foundation batch, Assam GS-V special modules, answer-writing enrichment, and current affairs.
+2. **ADRE 3.0 (Assam Direct Recruitment Examination):** Dedicated preparation for Grade III and Grade IV recruitment, Assam GK, elementary arithmetic, logical reasoning, and general English.
+3. **Banking Coaching (IBPS, SBI, RRB):** Specialized training for IBPS PO, IBPS Clerk, SBI PO, SBI Clerk, and Regional Rural Banks (RRB) with Quant, Reasoning, English, Banking Awareness, and timed speed drills.
+4. **Assam Police (SLPRB):** Targeted coaching for Sub-Inspector (SI), UB/AB Constable, and Commando Battalion written examinations.
+5. **SSC (Staff Selection Commission):** Speed and accuracy training for SSC CGL, CHSL, MTS, and GD Constable.
+6. **RRB & Railways:** Technical and non-technical preparation for RRB NTPC, Group D, and ALP.
+7. **Teaching Eligibility (TET & CTET):** Assam Special TET, Upper Primary, Lower Primary, and Central TET Child Pedagogy and Subject modules.
+8. **Higher Education (UGC NET / SLET):** Paper 1 teaching & research aptitude and core subject guidance.
+9. **School Foundation & Boards (Classes 5 to 12):** CBSE and SEBA board tutoring with foundational focus on Maths, Science, and English.
+10. **Computer & Professional Skills:** PGDCA and DCA recognized computer diploma courses and Spoken English & Interview grooming.
+
+## Digital Mock Tests & PYQs (PYQscore Integration)
+- Platform: https://pyqscore.in/
+- Android App: https://play.google.com/store/apps/details?id=com.pyqscore.app&pcampaignid=web_share
+- Features: Computer-Based Test (CBT) environment, chapter-wise MCQs, 10-year verified Previous Year Question Papers (PYQs), real-time percentile ranking, and instant solution analytics.
+
+## Canonical Web URLs
+- Homepage: https://salcoaching.in/
+- Dibrugarh Hub: https://salcoaching.in/coaching-in-dibrugarh/
+- Tezpur Hub: https://salcoaching.in/coaching-in-tezpur/
+- Banking in Dibrugarh: https://salcoaching.in/banking-coaching-in-dibrugarh/
+- Banking in Tezpur: https://salcoaching.in/banking-coaching-in-tezpur/
+- APSC Coaching: https://salcoaching.in/apsc-coaching/
+- ADRE Coaching: https://salcoaching.in/adre-coaching/
+- Banking Coaching: https://salcoaching.in/banking-coaching/
+- Assam Police Coaching: https://salcoaching.in/assam-police-coaching/
+- SSC Coaching: https://salcoaching.in/ssc-coaching/
+- RRB Railways: https://salcoaching.in/rrb-railways-coaching/
+- TET / CTET: https://salcoaching.in/tet-coaching/
+- UGC NET: https://salcoaching.in/ugc-net-coaching/
+- Computer Courses: https://salcoaching.in/computer-courses/
+- Courses Index: https://salcoaching.in/courses/
+- Contact & Admissions: https://salcoaching.in/contact/
+- About Institute: https://salcoaching.in/about/
+- Knowledge Blog: https://salcoaching.in/blog/

@@ -8,33 +8,223 @@
       "permanent": true
     },
     {
+      "source": "/best-apsc-coaching-in-dibrugarh",
+      "destination": "/apsc-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-apsc-coaching-in-dibrugarh.html",
+      "destination": "/apsc-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-apsc-coaching-in-dibrugarh-and-tezpur-cce-strategy",
+      "destination": "/apsc-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-apsc-coaching-in-dibrugarh-and-tezpur-cce-strategy.html",
+      "destination": "/apsc-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-banking-coaching-in-dibrugarh",
+      "destination": "/banking-coaching-in-dibrugarh/",
+      "permanent": true
+    },
+    {
+      "source": "/best-banking-coaching-in-dibrugarh.html",
+      "destination": "/banking-coaching-in-dibrugarh/",
+      "permanent": true
+    },
+    {
+      "source": "/banking-coaching-in-dibrugarh-and-tezpur",
+      "destination": "/banking-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/banking-coaching-in-dibrugarh-and-tezpur.html",
+      "destination": "/banking-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-assam-police-exam-coaching-in-dibrugarh-and-tezpur",
+      "destination": "/assam-police-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-assam-police-exam-coaching-in-dibrugarh-and-tezpur.html",
+      "destination": "/assam-police-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-tet-and-ctet-coaching-in-dibrugarh",
+      "destination": "/tet-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-tet-and-ctet-coaching-in-dibrugarh.html",
+      "destination": "/tet-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/best-competitive-exam-coaching-in-dibrugarh-and-tezpur",
+      "destination": "/courses",
+      "permanent": true
+    },
+    {
+      "source": "/best-competitive-exam-coaching-in-dibrugarh-and-tezpur.html",
+      "destination": "/courses",
+      "permanent": true
+    },
+    {
+      "source": "/adre-vs-banking-exam-syllabus-comparison-preparation-strategy",
+      "destination": "/adre-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/adre-vs-banking-exam-syllabus-comparison-preparation-strategy.html",
+      "destination": "/adre-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/why-scholar-academy-of-learning-is-the-top-choice-in-dibrugarh-and-tezpur",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/why-scholar-academy-of-learning-is-the-top-choice-in-dibrugarh-and-tezpur.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
       "source": "/apsc-banking",
-      "destination": "/apsc-coaching.html",
+      "destination": "/apsc-coaching",
       "permanent": true
     },
     {
       "source": "/apsc-banking/",
-      "destination": "/apsc-coaching.html",
+      "destination": "/apsc-coaching",
       "permanent": true
     },
     {
       "source": "/new-batches-apsc-banking",
-      "destination": "/apsc-coaching.html",
+      "destination": "/apsc-coaching",
       "permanent": true
     },
     {
       "source": "/new-batches-apsc-banking/",
-      "destination": "/apsc-coaching.html",
+      "destination": "/apsc-coaching",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/courses/apsc",
+      "source": "/coaching-in-dibrugarh",
+      "destination": "/coaching-in-dibrugarh.html"
+    },
+    {
+      "source": "/coaching-in-dibrugarh/",
+      "destination": "/coaching-in-dibrugarh.html"
+    },
+    {
+      "source": "/coaching-in-tezpur",
+      "destination": "/coaching-in-tezpur.html"
+    },
+    {
+      "source": "/coaching-in-tezpur/",
+      "destination": "/coaching-in-tezpur.html"
+    },
+    {
+      "source": "/banking-coaching-in-dibrugarh",
+      "destination": "/banking-coaching-in-dibrugarh.html"
+    },
+    {
+      "source": "/banking-coaching-in-dibrugarh/",
+      "destination": "/banking-coaching-in-dibrugarh.html"
+    },
+    {
+      "source": "/banking-coaching-in-tezpur",
+      "destination": "/banking-coaching-in-tezpur.html"
+    },
+    {
+      "source": "/banking-coaching-in-tezpur/",
+      "destination": "/banking-coaching-in-tezpur.html"
+    },
+    {
+      "source": "/assam-police-coaching",
+      "destination": "/assam-police-coaching.html"
+    },
+    {
+      "source": "/assam-police-coaching/",
+      "destination": "/assam-police-coaching.html"
+    },
+    {
+      "source": "/apsc-coaching",
       "destination": "/apsc-coaching.html"
     },
     {
-      "source": "/courses/apsc/",
+      "source": "/apsc-coaching/",
+      "destination": "/apsc-coaching.html"
+    },
+    {
+      "source": "/adre-coaching",
+      "destination": "/adre-coaching.html"
+    },
+    {
+      "source": "/adre-coaching/",
+      "destination": "/adre-coaching.html"
+    },
+    {
+      "source": "/banking-coaching",
+      "destination": "/banking-coaching.html"
+    },
+    {
+      "source": "/banking-coaching/",
+      "destination": "/banking-coaching.html"
+    },
+    {
+      "source": "/ssc-coaching",
+      "destination": "/ssc-coaching.html"
+    },
+    {
+      "source": "/ssc-coaching/",
+      "destination": "/ssc-coaching.html"
+    },
+    {
+      "source": "/rrb-railways-coaching",
+      "destination": "/rrb-railways-coaching.html"
+    },
+    {
+      "source": "/rrb-railways-coaching/",
+      "destination": "/rrb-railways-coaching.html"
+    },
+    {
+      "source": "/tet-coaching",
+      "destination": "/tet-coaching.html"
+    },
+    {
+      "source": "/tet-coaching/",
+      "destination": "/tet-coaching.html"
+    },
+    {
+      "source": "/ugc-net-coaching",
+      "destination": "/ugc-net-coaching.html"
+    },
+    {
+      "source": "/ugc-net-coaching/",
+      "destination": "/ugc-net-coaching.html"
+    },
+    {
+      "source": "/computer-courses",
+      "destination": "/computer-courses.html"
+    },
+    {
+      "source": "/computer-courses/",
+      "destination": "/computer-courses.html"
+    },
+    {
+      "source": "/courses/apsc",
       "destination": "/apsc-coaching.html"
     },
     {
@@ -42,15 +232,7 @@
       "destination": "/adre-coaching.html"
     },
     {
-      "source": "/courses/adre/",
-      "destination": "/adre-coaching.html"
-    },
-    {
       "source": "/courses/ssc",
-      "destination": "/ssc-coaching.html"
-    },
-    {
-      "source": "/courses/ssc/",
       "destination": "/ssc-coaching.html"
     },
     {
@@ -58,31 +240,7 @@
       "destination": "/banking-coaching.html"
     },
     {
-      "source": "/courses/banking/",
-      "destination": "/banking-coaching.html"
-    },
-    {
       "source": "/courses/rrb",
-      "destination": "/rrb-railways-coaching.html"
-    },
-    {
-      "source": "/courses/rrb/",
-      "destination": "/rrb-railways-coaching.html"
-    },
-    {
-      "source": "/courses/railways",
-      "destination": "/rrb-railways-coaching.html"
-    },
-    {
-      "source": "/courses/railways/",
-      "destination": "/rrb-railways-coaching.html"
-    },
-    {
-      "source": "/courses/other",
-      "destination": "/rrb-railways-coaching.html"
-    },
-    {
-      "source": "/courses/other/",
       "destination": "/rrb-railways-coaching.html"
     },
     {
@@ -90,23 +248,11 @@
       "destination": "/tet-coaching.html"
     },
     {
-      "source": "/courses/tet/",
-      "destination": "/tet-coaching.html"
-    },
-    {
       "source": "/courses/ugc-net",
       "destination": "/ugc-net-coaching.html"
     },
     {
-      "source": "/courses/ugc-net/",
-      "destination": "/ugc-net-coaching.html"
-    },
-    {
       "source": "/courses/computer",
-      "destination": "/computer-courses.html"
-    },
-    {
-      "source": "/courses/computer/",
       "destination": "/computer-courses.html"
     },
     {
@@ -116,6 +262,30 @@
     {
       "source": "/courses/",
       "destination": "/courses.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/about/",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog.html"
     },
     {
       "source": "/blog/:slug",
@@ -146,6 +316,19 @@
     },
     {
       "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
       "headers": [
         {
           "key": "Content-Type",
