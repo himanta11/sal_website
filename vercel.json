@@ -9,12 +9,12 @@
     },
     {
       "source": "/best-apsc-coaching-in-dibrugarh",
-      "destination": "/apsc-coaching",
+      "destination": "/apsc-coaching-in-dibrugarh/",
       "permanent": true
     },
     {
       "source": "/best-apsc-coaching-in-dibrugarh.html",
-      "destination": "/apsc-coaching",
+      "destination": "/apsc-coaching-in-dibrugarh/",
       "permanent": true
     },
     {
@@ -174,6 +174,22 @@
     {
       "source": "/apsc-coaching/",
       "destination": "/apsc-coaching.html"
+    },
+    {
+      "source": "/apsc-coaching-in-dibrugarh",
+      "destination": "/apsc-coaching-in-dibrugarh.html"
+    },
+    {
+      "source": "/apsc-coaching-in-dibrugarh/",
+      "destination": "/apsc-coaching-in-dibrugarh.html"
+    },
+    {
+      "source": "/apsc-coaching-in-tezpur",
+      "destination": "/apsc-coaching-in-tezpur.html"
+    },
+    {
+      "source": "/apsc-coaching-in-tezpur/",
+      "destination": "/apsc-coaching-in-tezpur.html"
     },
     {
       "source": "/adre-coaching",

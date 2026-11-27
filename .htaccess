@@ -8,7 +8,7 @@
   RewriteRule ^(.*)$ https://salcoaching.in/$1 [L,R=301]
 
   # 2. Canonical 301 Redirects: Consolidate Duplicate & Cannibalizing Topic URLs
-  RewriteRule ^best-apsc-coaching-in-dibrugarh(?:\.html)?/?$ /apsc-coaching/ [R=301,L]
+  RewriteRule ^best-apsc-coaching-in-dibrugarh(?:\.html)?/?$ /apsc-coaching-in-dibrugarh/ [R=301,L]
   RewriteRule ^best-apsc-coaching-in-dibrugarh-and-tezpur-cce-strategy(?:\.html)?/?$ /apsc-coaching/ [R=301,L]
   RewriteRule ^best-banking-coaching-in-dibrugarh(?:\.html)?/?$ /banking-coaching-in-dibrugarh/ [R=301,L]
   RewriteRule ^banking-coaching-in-dibrugarh-and-tezpur(?:\.html)?/?$ /banking-coaching/ [R=301,L]
@@ -37,6 +37,8 @@
 
   # 5. Core Canonical Route Mappings
   RewriteRule ^apsc-coaching/?$ apsc-coaching.html [L,QSA]
+  RewriteRule ^apsc-coaching-in-dibrugarh/?$ apsc-coaching-in-dibrugarh.html [L,QSA]
+  RewriteRule ^apsc-coaching-in-tezpur/?$ apsc-coaching-in-tezpur.html [L,QSA]
   RewriteRule ^adre-coaching/?$ adre-coaching.html [L,QSA]
   RewriteRule ^banking-coaching/?$ banking-coaching.html [L,QSA]
   RewriteRule ^banking-coaching-in-dibrugarh/?$ banking-coaching-in-dibrugarh.html [L,QSA]
