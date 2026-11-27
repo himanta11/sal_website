@@ -66,6 +66,7 @@
   RewriteRule ^courses/computer/?$ computer-courses.html [L,QSA]
 
   # Clean blog slug
+  RewriteRule ^blog/best-coaching-institute-dibrugarh-tezpur/?$ best-coaching-institute-dibrugarh-tezpur.html [L,QSA]
   RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ $1.html [L,QSA]
 
   # 6. Fallback clean URLs

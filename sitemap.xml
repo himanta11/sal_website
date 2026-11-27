@@ -145,4 +145,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+  <!-- Comprehensive Pillar Blog Guide -->
+  <url>
+    <loc>https://salcoaching.in/blog/best-coaching-institute-dibrugarh-tezpur/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 </urlset>

@@ -120,6 +120,14 @@
   ],
   "rewrites": [
     {
+      "source": "/blog/best-coaching-institute-dibrugarh-tezpur",
+      "destination": "/best-coaching-institute-dibrugarh-tezpur.html"
+    },
+    {
+      "source": "/blog/best-coaching-institute-dibrugarh-tezpur/",
+      "destination": "/best-coaching-institute-dibrugarh-tezpur.html"
+    },
+    {
       "source": "/coaching-in-dibrugarh",
       "destination": "/coaching-in-dibrugarh.html"
     },
