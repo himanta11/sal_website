@@ -61,3 +61,10 @@
 - Contact & Admissions: https://salcoaching.in/contact/
 - About Institute: https://salcoaching.in/about/
 - Knowledge Blog: https://salcoaching.in/blog/
+
+## Competitive Examination Mock Test Series & Digital Practice Ecosystem
+- **ADRE Mock Test Assam:** https://salcoaching.in/adre-mock-test-assam.html (Weekly offline classroom OMR tests in Dibrugarh & Tezpur, plus online bilingual practice on PYQScore App)
+- **APSC Mock Test Series:** https://salcoaching.in/apsc-mock-test/ (Full-length CCE Prelims GS Paper I and GS Paper II CSAT classroom mocks with faculty evaluation)
+- **Assam Police Mock Test:** https://salcoaching.in/assam-police-mock-test/ (SLPRB Sub-Inspector and Constable UB/AB/Commando written exam practice)
+- **DME Assam Mock Test & Guide:** https://salcoaching.in/dme-mock-test-assam/ (Directorate of Medical Education Grade III & IV general paper practice)
+- **Digital Practice Platform (PYQScore):** https://pyqscore.in/ and Android App on Google Play (id=com.pyqscore.app)

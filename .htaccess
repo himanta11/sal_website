@@ -55,6 +55,10 @@
   RewriteRule ^about/?$ about.html [L,QSA]
   RewriteRule ^contact/?$ contact.html [L,QSA]
   RewriteRule ^blog/?$ blog.html [L,QSA]
+  RewriteRule ^apsc-mock-test/?$ apsc-mock-test.html [L,QSA]
+  RewriteRule ^assam-police-mock-test/?$ assam-police-mock-test.html [L,QSA]
+  RewriteRule ^dme-mock-test-assam/?$ dme-mock-test-assam.html [L,QSA]
+
 
   # Backward compatibility course category queries
   RewriteRule ^courses/apsc/?$ apsc-coaching.html [L,QSA]

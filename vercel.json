@@ -318,6 +318,30 @@
     {
       "source": "/blog/:slug/",
       "destination": "/:slug.html"
+    },
+    {
+      "source": "/apsc-mock-test",
+      "destination": "/apsc-mock-test.html"
+    },
+    {
+      "source": "/apsc-mock-test/",
+      "destination": "/apsc-mock-test.html"
+    },
+    {
+      "source": "/assam-police-mock-test",
+      "destination": "/assam-police-mock-test.html"
+    },
+    {
+      "source": "/assam-police-mock-test/",
+      "destination": "/assam-police-mock-test.html"
+    },
+    {
+      "source": "/dme-mock-test-assam",
+      "destination": "/dme-mock-test-assam.html"
+    },
+    {
+      "source": "/dme-mock-test-assam/",
+      "destination": "/dme-mock-test-assam.html"
     }
   ],
   "headers": [

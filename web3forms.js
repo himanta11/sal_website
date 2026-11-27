@@ -292,3 +292,59 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// ==============================================================
+// INTEGRATED GROWTH ANALYTICS & ATTRIBUTION TRACKER
+// Scholar Academy of Learning + PYQScore Ecosystem
+// ==============================================================
+function trackEcosystemEvent(eventName, eventParams = {}) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: eventName,
+    ...eventParams,
+    timestamp: new Date().toISOString()
+  });
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  }
+}
+window.trackEcosystemEvent = trackEcosystemEvent;
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. landing_page_view event
+  trackEcosystemEvent("landing_page_view", {
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    page_title: document.title
+  });
+
+  // 2. Play Store and PYQScore outbound click tracking
+  document.addEventListener("click", (e) => {
+    const targetLink = e.target.closest("a");
+    if (!targetLink || !targetLink.href) return;
+
+    const href = targetLink.href;
+
+    try {
+      if (href.includes("play.google.com/store/apps/details")) {
+        const urlObj = new URL(href, window.location.origin);
+        const campaign = urlObj.searchParams.get("utm_campaign") || "direct_store";
+        const source = urlObj.searchParams.get("utm_source") || "salcoaching";
+        trackEcosystemEvent("play_store_click", {
+          destination_url: href,
+          utm_campaign: campaign,
+          utm_source: source,
+          link_text: (targetLink.innerText || "").trim().slice(0, 60)
+        });
+      } else if (href.includes("pyqscore.in")) {
+        trackEcosystemEvent("pyqscore_website_click", {
+          destination_url: href,
+          link_text: (targetLink.innerText || "").trim().slice(0, 60)
+        });
+      }
+    } catch (err) {
+      // safe fallback
+    }
+  });
+});
